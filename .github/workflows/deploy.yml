@@ -12,7 +12,7 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 defaults:
   run:
@@ -31,6 +31,13 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
+        
+      - name: Clean previous artifacts
+        run: |
+          # Clean any previous artifacts to avoid conflicts
+          rm -rf public/
+          rm -f hugo_stats.json
+          rm -f .hugo_build.lock
         
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -52,6 +59,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
+          name: hugo-site
 
   deploy:
     environment:
