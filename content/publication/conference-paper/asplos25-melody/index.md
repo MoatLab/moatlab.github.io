@@ -24,7 +24,7 @@ publication_types: ['paper-conference']
 
 # Publication name and optional abbreviated publication name.
 publication: In *Proceedings of the 29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS)*
-publication_short: In *ASPLOS 2025*
+publication_short: In *ASPLOS '25*
 
 abstract: 'This paper presents a systematic characterization and performance analysis of CXL memory at scale.'
 
