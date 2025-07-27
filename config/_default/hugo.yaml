@@ -6,7 +6,7 @@
 # Website name
 title: MoatLab
 # Website URL
-baseURL: 'https://moatlab.github.io/your-repo-name/'
+baseURL: 'https://moatlab.github.io/'
 
 ############################
 ## LANGUAGE
