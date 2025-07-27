@@ -25,7 +25,7 @@ publication_types: ["article-journal"]
 
 # Publication name and optional abbreviated publication name.
 publication: "*ACM Transactions on Storage, 19*(4)"
-publication_short: "*ACM TOS 2023*"
+publication_short: "*ACM TOS*"
 
 abstract: "This paper extends and programs the NVMe I/O Determinism Interface for flash arrays, providing deterministic I/O performance."
 

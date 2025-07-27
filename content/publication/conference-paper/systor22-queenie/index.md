@@ -22,7 +22,7 @@ publication_types: ['paper-conference']
 
 # Publication name and optional abbreviated publication name.
 publication: In *Proceedings of the 15th ACM International Systems and Storage Conference (SYSTOR)*
-publication_short: SYSTOR 2022
+publication_short: SYSTOR '22
 award: "Best Paper Award"
 
 abstract: 'This paper explores SSD internals and provides methods to learn and utilize them effectively.'

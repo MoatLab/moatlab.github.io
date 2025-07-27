@@ -24,7 +24,7 @@ publication_types: ['article-journal']
 
 # Publication name and optional abbreviated publication name.
 publication: '*ACM Transactions on Design Automation of Electronic Systems, 29*(2)'
-publication_short: '*TODAES 2024*'
+publication_short: '*ACM TODAES*'
 
 abstract: 'This paper presents ZoneTrace, a zone monitoring tool for F2FS on ZNS SSDs.'
 

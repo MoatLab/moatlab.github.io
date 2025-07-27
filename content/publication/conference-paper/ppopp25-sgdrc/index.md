@@ -25,7 +25,7 @@ publication_types: ['paper-conference']
 
 # Publication name and optional abbreviated publication name.
 publication: In *Proceedings of the 29th ACM SIGPLAN Annual Symposium on Principles and Practice of Parallel Programming (PPoPP)*
-publication_short: In *PPoPP 2025*
+publication_short: In *PPoPP '25*
 
 abstract: 'This paper presents SGDRC, a software-defined dynamic resource control system for concurrent DNN inference on NVIDIA GPUs.'
 
