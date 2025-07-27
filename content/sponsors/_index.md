@@ -21,6 +21,6 @@ description: "Our research sponsors and partners"
     <img src="/sponsors/intel-logo.svg" alt="Intel Corporation" class="sponsor-logo" loading="lazy">
   </div>
   <div class="sponsor-item">
-    <img src="/sponsors/western-digital-logo.png" alt="Western Digital" class="sponsor-logo" loading="lazy">
+    <img src="/sponsors/wdc-logo.svg" alt="Western Digital" class="sponsor-logo" loading="lazy">
   </div>
 </div>
