@@ -1,5 +1,6 @@
 ---
 title: "Evolving Storage Stack for Predictability and Efficiency"
+number: 99
 authors: ["Huaicheng Li"]
 date: 2020-06-01
 publication_types: ["7"]
@@ -11,7 +12,7 @@ image:
   caption: ""
   focal_point: ""
   preview_only: false
-url_pdf: "https://huaicheng.github.io/p/uchicago20-phd.pdf"
+url_pdf: "https://huaicheng.github.io/p/thesis.pdf"
 url_code: ""
 url_slides: ""
 url_video: ""

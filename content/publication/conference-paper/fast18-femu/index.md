@@ -1,5 +1,6 @@
 ---
 title: "The CASE of FEMU: Cheap, Accurate, Scalable and Extensible Flash Emulator"
+number: 99
 authors: ["Huaicheng Li", "Minghao Hao", "Ming-Hung Tong", "Sundararaman Swaminathan", "Matias Bjørling", "Haryadi S. Gunawi"]
 date: 2018-02-01
 publication_types: ["1"]

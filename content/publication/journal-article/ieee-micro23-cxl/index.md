@@ -44,7 +44,9 @@ featured: true
 # Custom links
 links:
 - name: Paper
-  url: https://huaicheng.github.io/p/ieee-micro23-cxl.pdf
+  url: https://ieeexplore.ieee.org/document/10034802
+
+url_pdf: 'https://ieeexplore.ieee.org/document/10034802'
 
 
 

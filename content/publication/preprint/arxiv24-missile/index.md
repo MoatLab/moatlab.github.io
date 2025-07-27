@@ -1,5 +1,6 @@
 ---
 title: "Missile: Fine-Grained, Hardware-Level GPU Resource Isolation for Multi-Tenant DNN Inference"
+number: 2
 authors: ["Yongkang Zhang", "Haoxuan Yu", "Chenxia Han", "Cheng Wang", "Baotong Lu", "Yang Li", "Zhifeng Jiang", "Yuyue Wang", "Xiaowen Chu", "Huaicheng Li"]
 date: 2024-07-01
 publication_types: ["3"]

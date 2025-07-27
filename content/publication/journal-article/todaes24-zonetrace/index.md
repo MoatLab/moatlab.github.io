@@ -1,6 +1,6 @@
 ---
 title: 'ZoneTrace: A Zone Monitoring Tool for F2FS on ZNS SSDs'
-number: 4
+number: 1
 
 # Authors
 authors:
@@ -14,7 +14,7 @@ authors:
   - Nikil Dutt
 
 date: '2024-01-01T00:00:00Z'
-doi: ''
+doi: '10.1145/3656172'
 
 # Schedule page publish date (NOT publication's date).
 publishDate: '2024-01-01T00:00:00Z'
@@ -41,7 +41,9 @@ featured: true
 # Custom links
 links:
 - name: Paper
-  url: https://huaicheng.github.io/p/todaes24-zonetrace.pdf
+  url: https://dl.acm.org/doi/10.1145/3656172
+
+url_pdf: 'https://dl.acm.org/doi/10.1145/3656172'
 
 
 

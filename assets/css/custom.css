@@ -59,7 +59,7 @@
   background: transparent;
   border-radius: 0;
   padding: 0;
-  margin-bottom: -60px; /* Much more aggressive negative margin for between entries */
+  margin-bottom: -32px; /* Use extremely aggressive negative margin to match first screenshot */
   box-shadow: none;
   border: none;
   border-bottom: none !important;
@@ -72,9 +72,9 @@
   border-bottom: none !important;
 }
 
-/* Aggressively reduce spacing between publication entries */
+/* Add proper spacing between publication entries */
 .publication-entry + .publication-entry {
-  margin-top: -60px !important; /* Much more aggressive for between entries */
+  margin-top: -28px !important; /* Use extremely aggressive negative margin to match first screenshot */
 }
 
 /* Remove any padding/margin from publication layout */
@@ -133,9 +133,9 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 2px; /* Slightly reduce gap within each paper to match screenshot */
   margin-bottom: 0;
-  padding-bottom: 0;
+  padding-bottom: 0; /* Remove negative padding */
   background: transparent;
 }
 
@@ -173,20 +173,37 @@
 .publication-entry .publication-links {
   font-size: 0.85rem;
   margin-bottom: 0 !important;
-  margin-top: 0.3rem !important; /* Add specific top margin for spacing */
-  padding-bottom: 0 !important;
-  line-height: 1 !important;
+  margin-top: 0.2rem !important; /* Slightly reduce margin for links to match screenshot */
+  padding-bottom: 0 !important; /* Remove negative padding */
+  line-height: 1.1 !important; /* Slightly reduce line height to match screenshot */
+  display: flex;
+  gap: 1.2rem; /* Reduce gap between links */
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping if needed */
 }
 
 .publication-entry .publication-links a {
-  color: #861F41;
+  color: #2c5aa0;
   text-decoration: none;
-  margin-right: 1rem;
+  margin-right: 0; /* Remove margin since we're using gap */
+  padding: 4px 8px; /* Add comfortable padding for the box */
+  border-radius: 4px; /* Modern rounded corners */
+  transition: all 0.2s ease;
+  background-color: rgba(44, 90, 160, 0.08); /* Light blue background color */
+  border: 1px solid rgba(44, 90, 160, 0.15); /* Subtle blue border */
+  font-weight: 500; /* Slightly bolder text */
+  font-size: 0.8rem; /* Slightly smaller font */
 }
 
 .publication-entry .publication-links a:hover {
-  text-decoration: underline;
+  background-color: rgba(44, 90, 160, 0.15); /* Darker blue background on hover */
+  border-color: rgba(44, 90, 160, 0.3); /* Darker blue border on hover */
+  transform: translateY(-1px); /* Slight lift effect */
+  box-shadow: 0 2px 4px rgba(44, 90, 160, 0.1); /* Subtle blue shadow on hover */
+  text-decoration: none; /* Remove underline for cleaner look */
 }
+
+/* This rule is now handled above */
 
 /* Year Grouping Styles */
 .publications-container {

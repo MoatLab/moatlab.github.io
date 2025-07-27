@@ -7,15 +7,12 @@ authors:
   - Huaicheng Li
   - Martin L. Putra
   - Ronald Shi
-  - Fadhil I. Kurnia
   - Xing Lin
-  - Jaeyoung Do
-  - Achmad Imam Kistijantoro
   - Gregory R. Ganger
   - Haryadi S. Gunawi
 
 date: "2021-10-25T00:00:00Z"
-doi: "10.1145/3477132.3483540"
+doi: "10.1145/3477132.3483573"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2021-10-25T00:00:00Z"
@@ -44,11 +41,15 @@ featured: true
 # Custom links
 links:
 - name: Paper
-  url: https://dl.acm.org/doi/10.1145/3477132.3483540
+  url: https://dl.acm.org/doi/10.1145/3477132.3483573
 - name: Code
-  url: https://github.com/moatlab/ioda
+  url: https://github.com/MoatLab/IODA-SOSP21-AE
 - name: Slides
-  url: https://huaicheng.github.io/p/sosp21-ioda-slides.pdf
+  url: https://huaicheng.github.io/s/sosp21-ioda-slides.pdf
+
+url_pdf: 'https://huaicheng.github.io/p/sosp21-ioda.pdf'
+url_code: 'https://github.com/MoatLab/IODA-SOSP21-AE'
+url_slides: 'https://huaicheng.github.io/s/sosp21-ioda-slides.pdf'
 
 # Featured image
 image:

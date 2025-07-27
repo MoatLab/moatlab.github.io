@@ -38,6 +38,8 @@
             font-weight: bold;
             color: #2c3e50;
             text-decoration: none;
+            display: flex;
+            align-items: center;
         }
         
         .navbar-nav {
@@ -68,11 +70,72 @@
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
         
+        /* Increase width for publications section specifically */
+        .publications-container {
+            max-width: 90%;
+            margin: 0 auto;
+        }
+        
+        /* Increase text content width for publications */
+        .publications-container .publication-content {
+            max-width: 95%;
+        }
+        
         .content {
             font-size: 1.1rem;
             color: #333;
             max-width: 800px;
             margin: 0 auto;
+        }
+        
+        /* Increase text width for publications section */
+        .publications-container .content {
+            max-width: 1400px;
+        }
+        
+        /* Increase width for publication titles specifically */
+        .publication-entry .publication-content {
+            max-width: none;
+            width: 100%;
+        }
+        
+        .publication-entry .publication-title {
+            max-width: none;
+            width: 100%;
+            word-break: keep-all;
+            hyphens: none;
+        }
+        
+        /* Override any container constraints */
+        .publications-container {
+            max-width: none;
+            width: 100%;
+        }
+        
+        .main-container {
+            max-width: none;
+            width: 100%;
+        }
+        
+        /* Make the publication layout use more space for content */
+        .publication-entry .publication-layout {
+            gap: 2px;
+        }
+        
+        .publication-entry .publication-number-column {
+            width: 25px;
+            min-width: 25px;
+        }
+        
+        .publication-entry .publication-content {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        /* Ensure maximum space for titles */
+        .publication-entry .publication-title {
+            font-size: 1.02rem;
+            line-height: 1.15;
         }
         
         .content ul {
@@ -215,6 +278,11 @@
             grid-template-columns: repeat(4, 1fr);
             gap: 8px;
             max-width: 100%;
+        }
+        
+        /* Add more vertical spacing between student profiles in home section */
+        .people-grid.vertical .person-card.student {
+            margin-bottom: 24px;
         }
 
         .person-card {
@@ -380,7 +448,7 @@
     <div class="page-header">
         <nav class="navbar">
             <a href="/" class="navbar-brand">
-                <img src="https://huaicheng.github.io/moatlab-pics/moatlab-logo.png" alt="MoatLab Logo" style="height: 30px; width: auto; margin-right: 8px; vertical-align: middle;">
+                <img src="https://huaicheng.github.io/moatlab-pics/moatlab-logo.png" alt="MoatLab Logo" style="height: 30px; width: auto; margin-right: 8px;">
                 MoatLab
             </a>
             <ul class="navbar-nav">

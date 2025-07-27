@@ -9,13 +9,14 @@ authors:
   - Chenxia Han
   - Cheng Wang
   - Baotong Lu
+  - Yunzhe Li
   - Zhifeng Jiang
   - Yang Li
   - Xiaowen Chu
   - Huaicheng Li
 
 date: '2025-01-01T00:00:00Z'
-doi: ''
+doi: '10.1145/3710848.3710863'
 
 # Schedule page publish date (NOT publication's date).
 publishDate: '2025-01-01T00:00:00Z'
@@ -43,7 +44,7 @@ featured: true
 # Custom links
 links:
 - name: Paper
-  url: https://huaicheng.github.io/p/ppopp25-sgdrc.pdf
+  url: https://dl.acm.org/doi/10.1145/3710848.3710863
 
 url_pdf: 'https://huaicheng.github.io/p/ppopp25-sgdrc.pdf'
 

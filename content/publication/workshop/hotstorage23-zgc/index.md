@@ -1,5 +1,6 @@
 ---
 title: "Is Garbage Collection Overhead Gone? Case study of F2FS on ZNS SSDs"
+number: 99
 authors: ["Dongjoo Seo", "Ping-Xiang Chen", "Huaicheng Li", "Matias Bjørling", "Nikil Dutt"]
 date: 2023-07-01
 publication_types: ["1"]

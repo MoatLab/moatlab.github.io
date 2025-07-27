@@ -1,5 +1,6 @@
 ---
 title: "MittOS: Supporting Millisecond Tail Tolerance with Fast Rejecting SLO-aware OS interface"
+number: 99
 authors: ["Minghao Hao", "Huaicheng Li", "Ming-Hung Tong", "Chathura Kankanamge", "Riza O. Suminto", "Carlos A. Stuardo", "Andrew A. Chien", "Haryadi S. Gunawi"]
 date: 2017-10-01
 publication_types: ["1"]

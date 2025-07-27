@@ -4,9 +4,9 @@ cms_exclude: true
 # View.
 view: citation
 
-# Sort publications by number parameter
-sort_by: "Params.number"
-order: "asc"
+# Sort publications by date parameter
+sort_by: "date"
+order: "desc"
 
 # Show all papers on one page (no pagination)
 paginate: 9999

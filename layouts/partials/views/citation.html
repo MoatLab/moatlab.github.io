@@ -4,7 +4,7 @@
 {{ $isMoatlabEra := ge $year 2022 }}
 
 <div class="publication-entry" data-year="{{ $year }}" data-era="{{ if $isMoatlabEra }}moatlab{{ else }}pre-moatlab{{ end }}">
-  <div class="year-block {{ if $isMoatlabEra }}moatlab-era{{ else }}pre-moatlab-era{{ end }}">{{ $year }}</div>
+  <div class="year-block {{ if $isMoatlabEra }}moatlab-era{{ else }}pre-moatlab-era{{ end }}">{{ if eq $year 2021 }}2021 (Pre-VT){{ else }}{{ $year }}{{ end }}</div>
   <div class="publication-layout">
     <div class="publication-number-column">
       <span class="publication-number">{{ if .index }}{{ add .index 1 }}{{ else }}1{{ end }}</span>
