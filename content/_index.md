@@ -16,7 +16,7 @@ The <span style="color: #e5751f; font-weight: bold;">M</span><span style="color:
       <img src="/moatlab-pics/huaicheng-vt.jpg" alt="Huaicheng Li">
     </div>
     <div class="person-info">
-      <h3 class="person-name">Huaicheng Li</h3>
+      <h3 class="person-name"><a href="https://huaicheng.github.io" target="_blank">Huaicheng Li</a></h3>
       <p class="person-title">Assistant Professor</p>
       <p class="person-email">huaicheng@cs.vt.edu</p>
       <div class="person-links">
