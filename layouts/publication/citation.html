@@ -1,0 +1,105 @@
+{{ $page := . }}
+
+<div class="publication-item">
+  <div class="publication-layout">
+    <!-- Conference/Journal Acronym -->
+    <div class="publication-venue-badge">
+      {{ if $page.Params.publication_short }}
+        {{ $venue := $page.Params.publication_short | replaceRE "In \\*" "" | replaceRE "\\*" "" }}
+        {{ $venue }}
+      {{ end }}
+    </div>
+
+    <!-- Main Content -->
+    <div class="publication-content">
+      <!-- Paper Number and Title -->
+      <div class="publication-header">
+        <span class="publication-number">{{ $page.Scratch.Get "publication_number" }}</span>
+        <h3 class="publication-title">
+          {{ $page.Title }}
+        </h3>
+      </div>
+
+      <!-- Authors -->
+      <div class="publication-authors">
+        {{ $authors := $page.Params.authors }}
+        {{ $len := len $authors }}
+        {{ range $index, $author := $authors }}
+          {{ $authorPage := $.Site.GetPage (printf "/authors/%s" $author) }}
+          {{ if $authorPage }}
+            {{ $isMoatlab := false }}
+            {{ $isHuaicheng := false }}
+            {{ if eq $authorPage.Title "Huaicheng Li" }}
+              {{ $isHuaicheng = true }}
+            {{ end }}
+            {{ if $authorPage.Params.user_groups }}
+              {{ range $authorPage.Params.user_groups }}
+                {{ if eq . "MoatLab Students" }}
+                  {{ $isMoatlab = true }}
+                {{ end }}
+              {{ end }}
+            {{ end }}
+            
+            {{ if and $isMoatlab (not $isHuaicheng) }}
+              <span class="moatlab-author">{{ $authorPage.Title }}{{ if ne (add $index 1) $len }},{{ end }}</span>
+            {{ else if $isHuaicheng }}
+              <span class="pi-author">{{ $authorPage.Title }}{{ if ne (add $index 1) $len }},{{ end }}</span>
+            {{ else }}
+              <span class="external-author">{{ $authorPage.Title }}{{ if ne (add $index 1) $len }},{{ end }}</span>
+            {{ end }}
+          {{ else }}
+            <span class="external-author">{{ $author }}{{ if ne (add $index 1) $len }},{{ end }}</span>
+          {{ end }}
+        {{ end }}
+      </div>
+
+      <!-- Abstract -->
+      {{ if $page.Params.abstract }}
+        <div class="publication-abstract">
+          {{ $page.Params.abstract }}
+        </div>
+      {{ end }}
+
+      <!-- Links -->
+      <div class="publication-links">
+        {{ if $page.Params.url_pdf }}
+          <a href="{{ $page.Params.url_pdf }}" class="publication-link" target="_blank">
+            <i class="fas fa-file-pdf"></i>PDF
+          </a>
+        {{ end }}
+        
+        {{ if $page.Params.url_code }}
+          <a href="{{ $page.Params.url_code }}" class="publication-link" target="_blank">
+            <i class="fab fa-github"></i>Code
+          </a>
+        {{ end }}
+        
+        {{ if $page.Params.url_poster }}
+          <a href="{{ $page.Params.url_poster }}" class="publication-link" target="_blank">
+            <i class="fas fa-image"></i>Poster
+          </a>
+        {{ end }}
+        
+        {{ if $page.Params.url_slides }}
+          <a href="{{ $page.Params.url_slides }}" class="publication-link" target="_blank">
+            <i class="fas fa-presentation"></i>Slides
+          </a>
+        {{ end }}
+        
+        {{ if $page.Params.url_video }}
+          <a href="{{ $page.Params.url_video }}" class="publication-link" target="_blank">
+            <i class="fas fa-video"></i>Video
+          </a>
+        {{ end }}
+        
+        {{ if $page.Params.links }}
+          {{ range $page.Params.links }}
+            <a href="{{ .url }}" class="publication-link" target="_blank">
+              <i class="fas fa-external-link-alt"></i>{{ .name }}
+            </a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div> 

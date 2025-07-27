@@ -1,0 +1,82 @@
+{{ $item := .item }}
+
+{{ $year := $item.Date.Year }}
+{{ $isMoatlabEra := ge $year 2022 }}
+
+<div class="publication-entry" data-year="{{ $year }}" data-era="{{ if $isMoatlabEra }}moatlab{{ else }}pre-moatlab{{ end }}">
+  <div class="year-block {{ if $isMoatlabEra }}moatlab-era{{ else }}pre-moatlab-era{{ end }}">{{ $year }}</div>
+  <div class="publication-layout">
+    <div class="publication-number-column">
+      <span class="publication-number">{{ add .index 1 }}</span>
+    </div>
+    <div class="publication-content">
+      <div class="publication-title">
+        {{ $item.Title }}
+      </div>
+  
+  <div class="publication-authors">
+    {{ if $item.Params.authors }}
+      {{ $authors := $item.Params.authors }}
+      {{ $len := len $authors }}
+      {{ range $index, $author := $authors }}
+        {{ $authorPage := $.Site.GetPage (printf "/authors/%s" $author) }}
+        {{ if $authorPage }}
+          {{ $isMoatlab := false }}
+          {{ $isHuaicheng := false }}
+          {{ if eq $authorPage.Title "Huaicheng Li" }}
+            {{ $isHuaicheng = true }}
+          {{ end }}
+          {{ if $authorPage.Params.user_groups }}
+            {{ range $authorPage.Params.user_groups }}
+              {{ if eq . "MoatLab Students" }}
+                {{ $isMoatlab = true }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+          
+          {{ if and $isMoatlab (not $isHuaicheng) }}
+            <span class="moatlab-author">{{ $authorPage.Title }}{{ if ne (add $index 1) $len }},{{ end }}</span>
+          {{ else if $isHuaicheng }}
+            <span class="pi-author">{{ $authorPage.Title }}{{ if ne (add $index 1) $len }},{{ end }}</span>
+          {{ else }}
+            <span class="external-author">{{ $authorPage.Title }}{{ if ne (add $index 1) $len }},{{ end }}</span>
+          {{ end }}
+        {{ else }}
+          <span class="external-author">{{ $author }}{{ if ne (add $index 1) $len }},{{ end }}</span>
+        {{ end }}
+      {{ end }}
+    {{ else }}
+      <span class="external-author">Authors not specified</span>
+    {{ end }}
+  </div>
+  
+  <div class="publication-venue">
+    {{ if $item.Params.publication_short }}
+      {{ $venue := $item.Params.publication_short | replaceRE "In \\*" "" | replaceRE "\\*" "" }}
+      {{ $venue }}
+    {{ else }}
+      {{ if $item.Params.publication }}
+        {{ $item.Params.publication }}
+      {{ else }}
+        Publication
+      {{ end }}
+    {{ end }}
+  </div>
+  
+      <div class="publication-links">
+        {{ if $item.Params.url_pdf }}
+          <a href="{{ $item.Params.url_pdf }}" target="_blank">PDF</a>
+        {{ end }}
+        {{ if $item.Params.url_code }}
+          <a href="{{ $item.Params.url_code }}" target="_blank">Code</a>
+        {{ end }}
+        {{ if $item.Params.url_slides }}
+          <a href="{{ $item.Params.url_slides }}" target="_blank">Slides</a>
+        {{ end }}
+      </div>
+      {{ if $item.Params.award }}
+        <div class="publication-award">{{ $item.Params.award }}</div>
+      {{ end }}
+    </div>
+  </div>
+</div> 

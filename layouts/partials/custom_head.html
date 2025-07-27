@@ -1,0 +1,11 @@
+{{ $custom_css := resources.Get "css/custom.css" }}
+{{ if $custom_css }}
+  {{ $custom_css := $custom_css | resources.Minify }}
+  <link rel="stylesheet" href="{{ $custom_css.RelPermalink }}">
+{{ end }}
+
+{{ $year_grouping_js := resources.Get "js/year-grouping.js" }}
+{{ if $year_grouping_js }}
+  {{ $year_grouping_js := $year_grouping_js | resources.Minify }}
+  <script src="{{ $year_grouping_js.RelPermalink }}" defer></script>
+{{ end }}

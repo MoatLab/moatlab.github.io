@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Site.Title }}</title>
+    <link rel="stylesheet" href="/css/themes/blue.min.css">
+    <link href="/dist/wc.min.css" rel="stylesheet">
+    {{ partial "custom_head.html" . }}
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        
+        .page-header {
+            background-color: white;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 30;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 75%;
+            margin: 0 auto;
+        }
+        
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+            text-decoration: none;
+        }
+        
+        .navbar-nav {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 2rem;
+        }
+        
+        .nav-link {
+            color: #6b7280;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: #2c3e50;
+        }
+        
+        .main-container {
+            max-width: 75%;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: white;
+            min-height: 80vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .content {
+            font-size: 1.1rem;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .content ul {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .content strong {
+            color: #2c3e50;
+        }
+
+        /* UTNS-style Publications */
+        .publication-entry {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .publication-entry:last-child {
+            border-bottom: none;
+        }
+
+        .publication-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-title a {
+            color: #2c3e50;
+            text-decoration: none;
+        }
+
+        .publication-title a:hover {
+            color: #861F41;
+            text-decoration: underline;
+        }
+
+        .publication-authors {
+            font-size: 0.95rem;
+            color: #6b7280;
+            margin-bottom: 0.3rem;
+        }
+
+        .moatlab-author {
+            text-decoration: underline;
+            color: #861F41;
+        }
+
+        .pi-author {
+            font-weight: bold;
+            font-style: italic;
+            color: #2c3e50;
+        }
+
+        .external-author {
+            color: #6b7280;
+        }
+
+        .publication-venue {
+            font-size: 0.9rem;
+            color: #861F41;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-links {
+            font-size: 0.85rem;
+        }
+
+        .publication-links a {
+            color: #861F41;
+            text-decoration: none;
+            margin-right: 1rem;
+        }
+
+        .publication-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Sponsors Grid - Logos Only */
+        .sponsor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            align-items: center;
+        }
+
+        .sponsor-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            background-color: white;
+            transition: transform 0.2s, box-shadow 0.2s;
+            min-height: 100px;
+        }
+
+        .sponsor-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .sponsor-logo {
+            max-width: 120px;
+            max-height: 80px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            filter: grayscale(0%);
+            transition: filter 0.2s;
+        }
+
+        .sponsor-item:hover .sponsor-logo {
+            filter: grayscale(0%);
+        }
+
+        /* People section styles for homepage */
+        .people-section {
+            margin-bottom: 20px;
+            max-width: 100%;
+            padding: 0 10px;
+        }
+
+        .people-grid {
+            display: grid;
+            gap: 16px;
+            margin-bottom: 20px;
+            max-width: 100%;
+        }
+
+        .people-grid.vertical {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            max-width: 100%;
+        }
+
+        .person-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border-radius: 8px;
+            padding: 16px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            gap: 16px;
+            max-width: 100%;
+        }
+
+        .person-card.vertical {
+            max-width: 100%;
+        }
+
+        .person-card.faculty {
+            background: transparent;
+            border: none;
+            padding: 24px;
+        }
+
+        .person-card.student {
+            background: white;
+        }
+
+        .person-card.student.co-advised {
+            background: white;
+        }
+
+        .person-card.student.visiting {
+            background: white;
+        }
+
+        .person-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .person-image img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #e5e7eb;
+        }
+
+        .person-card.faculty .person-image img {
+            width: 130px;
+            height: 130px;
+            border-width: 3px;
+        }
+
+        .person-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .person-name {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .person-card.faculty .person-name {
+            font-size: 1.4rem;
+            color: #2c3e50;
+        }
+
+        .person-name a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .person-name a:hover {
+            color: #861F41;
+        }
+
+        .person-title {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        .person-email {
+            margin: 0;
+            font-size: 0.85rem;
+            color: #861F41;
+        }
+
+        .person-period {
+            margin: 0;
+            font-size: 0.8rem;
+            color: #9ca3af;
+        }
+
+        .person-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 8px;
+        }
+
+        .person-links a {
+            color: #861F41;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .person-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .people-grid.vertical {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 8px;
+            }
+            
+            .person-card.faculty {
+                padding: 20px;
+            }
+            
+            .people-section {
+                padding: 0 5px;
+            }
+            
+            .people-grid {
+                gap: 12px;
+            }
+
+            .sponsor-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .people-section {
+                padding: 0 2px;
+            }
+            
+            .people-grid.vertical {
+                gap: 12px;
+            }
+
+            .sponsor-grid {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-header">
+        <nav class="navbar">
+            <a href="/" class="navbar-brand">
+                <img src="https://huaicheng.github.io/moatlab-pics/moatlab-logo.png" alt="MoatLab Logo" style="height: 30px; width: auto; margin-right: 8px; vertical-align: middle;">
+                MoatLab
+            </a>
+            <ul class="navbar-nav">
+                <li><a href="/" class="nav-link {{ if eq .RelPermalink "/" }}active{{ end }}">Home</a></li>
+                <li><a href="/publication/" class="nav-link {{ if eq .RelPermalink "/publication/" }}active{{ end }}">Papers</a></li>
+                <li><a href="/teaching/" class="nav-link {{ if eq .RelPermalink "/teaching/" }}active{{ end }}">Courses</a></li>
+                <li><a href="/opensource/" class="nav-link {{ if eq .RelPermalink "/opensource/" }}active{{ end }}">Open-Source</a></li>
+                <li><a href="/sponsors/" class="nav-link {{ if eq .RelPermalink "/sponsors/" }}active{{ end }}">Sponsors</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class="main-container">
+        <div class="content">
+            {{ block "main" . }}{{ end }}
+        </div>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,594 @@
+/* Professional Publication Items */
+.publication-item {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 0;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.publication-item:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  transform: translateY(-3px);
+}
+
+.publication-layout {
+  display: flex;
+  min-height: 120px;
+}
+
+/* Conference/Journal Badge */
+.publication-venue-badge {
+  background: linear-gradient(135deg, #861F41 0%, #E5751F 100%);
+  color: white;
+  padding: 20px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-align: center;
+  line-height: 1.2;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+}
+
+/* Main Content Area */
+.publication-content {
+  flex: 1;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Publication Header with Number and Title */
+.publication-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+/* Publication Entry (for the citation view) */
+.publication-entry {
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  margin-bottom: -60px; /* Much more aggressive negative margin for between entries */
+  box-shadow: none;
+  border: none;
+  border-bottom: none !important;
+  transition: none;
+  counter-increment: publication-counter;
+}
+
+/* Remove any border-bottom from publication entry children */
+.publication-entry * {
+  border-bottom: none !important;
+}
+
+/* Aggressively reduce spacing between publication entries */
+.publication-entry + .publication-entry {
+  margin-top: -60px !important; /* Much more aggressive for between entries */
+}
+
+/* Remove any padding/margin from publication layout */
+.publication-entry .publication-layout {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Target any container that might have spacing */
+.publications-container > * {
+  margin-bottom: 0 !important;
+}
+
+/* Remove spacing from any div elements that might be causing gaps */
+.publication-entry div {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Target the specific elements that might have line-height causing spacing */
+.publication-entry .publication-links {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  line-height: 1 !important;
+}
+
+/* Remove any extra spacing from the bottom of publication entries */
+.publication-entry .publication-links {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.publication-entry:hover {
+  box-shadow: none;
+  transform: none;
+}
+
+.publication-entry .publication-layout {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  background: transparent;
+}
+
+.publication-entry .publication-number-column {
+  flex-shrink: 0;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  padding-top: 0;
+  line-height: 1.4;
+}
+
+.publication-entry .publication-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  background: transparent;
+}
+
+.publication-entry .publication-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.publication-entry .publication-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.publication-entry .publication-title a:hover {
+  color: #861F41;
+  text-decoration: underline;
+}
+
+.publication-entry .publication-authors {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin-bottom: 0.05rem;
+}
+
+.publication-entry .publication-venue {
+  font-size: 0.9rem;
+  color: #861F41;
+  font-weight: 500;
+  margin-bottom: 0.5rem; /* Increased further for better spacing between venue and links */
+}
+
+.publication-entry .publication-links {
+  font-size: 0.85rem;
+  margin-bottom: 0 !important;
+  margin-top: 0.3rem !important; /* Add specific top margin for spacing */
+  padding-bottom: 0 !important;
+  line-height: 1 !important;
+}
+
+.publication-entry .publication-links a {
+  color: #861F41;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.publication-entry .publication-links a:hover {
+  text-decoration: underline;
+}
+
+/* Year Grouping Styles */
+.publications-container {
+  counter-reset: publication-counter year-counter;
+}
+
+/* Year block styling */
+.year-block {
+  color: #000000;
+  font-weight: 700;
+  font-size: 1.6rem;
+  display: none; /* Hidden by default, shown by JavaScript */
+  margin-bottom: 16px;
+  margin-top: 24px; /* Increased top margin */
+  padding-top: 8px; /* Added top padding */
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e5e7eb !important;
+  margin-left: -80px; /* Move further to the left */
+}
+
+/* Gray color for 2021 and earlier years */
+.year-block.pre-moatlab-era {
+  color: #6b7280;
+}
+
+
+
+/* Update publication layout to accommodate year block */
+.publication-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+/* Ensure publication number column aligns properly */
+.publication-number-column {
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+}
+
+
+
+/* Publication number styling */
+.publication-number {
+  font-weight: 700;
+  color: #861F41;
+  font-size: 1.1rem;
+}
+
+/* Author styling */
+.moatlab-author {
+  text-decoration: underline;
+  color: #861F41;
+  font-weight: 500;
+}
+
+.pi-author {
+  font-weight: bold;
+  font-style: italic;
+  color: #2c3e50;
+}
+
+.external-author {
+  color: #6b7280;
+}
+
+/* Distinguished Paper Award styling */
+.publication-award {
+  color: #e5751f; /* Virginia Tech orange */
+  font-weight: 600;
+  font-size: 1.0rem;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .publication-layout {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .publication-venue-badge {
+    writing-mode: horizontal-tb;
+    transform: none;
+    min-width: auto;
+    padding: 12px 16px;
+  }
+
+  .publication-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .year-block {
+    float: none;
+    display: inline-block;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+}
+
+/* People Grid Styles */
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.people-grid.vertical {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  max-width: 100%;
+}
+
+.person-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 16px;
+  transition: transform 0.2s;
+}
+
+.person-card:hover {
+  transform: translateY(-2px);
+}
+
+.person-card.faculty {
+  grid-column: span 2;
+  padding: 24px;
+  background: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.person-card.vertical {
+  background: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.person-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.person-name {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.person-card.faculty .person-name {
+  font-size: 1.4rem;
+  color: #2c3e50;
+}
+
+.person-name a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.person-name a:hover {
+  color: #861F41;
+}
+
+.person-title {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.person-email {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #861F41;
+}
+
+.person-period {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+.person-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.person-links a {
+  color: #861F41;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.person-links a:hover {
+  text-decoration: underline;
+}
+
+/* Sponsor Grid Styles */
+.sponsor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+  align-items: center;
+}
+
+.sponsor-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  transition: transform 0.2s;
+  min-height: 100px;
+  background: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.sponsor-item:hover {
+  transform: translateY(-2px);
+}
+
+.sponsor-item img {
+  max-width: 100%;
+  max-height: 80px;
+  object-fit: contain;
+}
+
+/* GitHub-style Repository Cards */
+.github-repos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.repo-card {
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  padding: 16px;
+  background-color: #ffffff;
+  transition: border-color 0.15s ease-in-out;
+}
+
+.repo-card:hover {
+  border-color: #0969da;
+}
+
+.repo-header {
+  margin-bottom: 8px;
+}
+
+.repo-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.repo-icon {
+  font-size: 16px;
+  color: #656d76;
+}
+
+.repo-name {
+  color: #0969da;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.repo-name:hover {
+  text-decoration: underline;
+}
+
+.repo-visibility {
+  background-color: #f6f8fa;
+  border: 1px solid #d0d7de;
+  border-radius: 12px;
+  padding: 0 7px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #656d76;
+  line-height: 16px;
+}
+
+.repo-description {
+  color: #656d76;
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.repo-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 12px;
+  color: #656d76;
+}
+
+.repo-language {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.language-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #f1e05a;
+}
+
+.repo-stats {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.repo-stars, .repo-forks {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+/* Language-specific colors */
+.repo-card:nth-child(1) .language-dot { background-color: #e34c26; } /* HTML */
+.repo-card:nth-child(2) .language-dot { background-color: #555555; } /* C */
+.repo-card:nth-child(3) .language-dot { background-color: #555555; } /* C */
+.repo-card:nth-child(4) .language-dot { background-color: #e34c26; } /* HTML */
+.repo-card:nth-child(5) .language-dot { background-color: #555555; } /* C */
+.repo-card:nth-child(6) .language-dot { background-color: #555555; } /* C */
+
+/* Course-specific styling */
+.repo-students, .repo-semester {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+/* Course language colors */
+.repo-card .language-dot[data-language="C/C++"] { background-color: #f34b7d; }
+.repo-card .language-dot[data-language="Research"] { background-color: #6f42c1; }
+.repo-card .language-dot[data-language="C"] { background-color: #555555; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .people-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  .people-grid.vertical {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .person-card.faculty {
+    grid-column: span 1;
+    padding: 20px;
+  }
+
+  .people-grid {
+    gap: 12px;
+  }
+
+  .sponsor-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .people-grid.vertical {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+          .sponsor-grid {
+          grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+          gap: 0.5rem;
+        }
+        
+        .github-repos {
+          grid-template-columns: 1fr;
+        }
+}

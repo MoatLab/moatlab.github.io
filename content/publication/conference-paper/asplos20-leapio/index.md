@@ -1,0 +1,25 @@
+---
+title: "LeapIO: Efficient and Portable Virtual NVMe Storage on ARM SoCs"
+authors: ["Huaicheng Li", "Minghao Hao", "Stanko Novakovic", "Vaibhav Gogte", "Sivaramakrishnan Govindan", "Dan R. K. Ports", "Irene Zhang", "Arvind Krishnamurthy", "Thomas Anderson", "Jayaram Mudigonda"]
+date: 2020-03-01
+publication_types: ["1"]
+publication: "In 25th ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS)"
+publication_short: "ASPLOS '20"
+abstract: ""
+featured: false
+image:
+  caption: ""
+  focal_point: ""
+  preview_only: false
+url_pdf: "https://huaicheng.github.io/p/asplos20-leapio.pdf"
+url_code: ""
+url_slides: ""
+url_video: ""
+url_dataset: ""
+url_poster: ""
+url_source: ""
+math: false
+highlight: false
+projects: []
+slides: ""
+--- 
