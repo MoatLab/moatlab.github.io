@@ -447,6 +447,9 @@
   max-width: 100%;
   max-height: 80px;
   object-fit: contain;
+  display: block;
+  width: auto;
+  height: auto;
 }
 
 /* GitHub-style Repository Cards */
@@ -538,13 +541,43 @@
 .repo-stats {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
 }
 
 .repo-stars, .repo-forks {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 4px;
+  font-size: 0.9rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.repo-stars svg {
+  color: #fbbf24 !important;
+  fill: #fbbf24 !important;
+  stroke: #fbbf24 !important;
+  flex-shrink: 0;
+  z-index: 10;
+  position: relative;
+}
+
+.repo-forks svg {
+  color: #6b7280;
+  flex-shrink: 0;
+}
+
+.repo-stars span {
+  color: #000000;
+  flex-shrink: 0;
+}
+
+.repo-forks svg {
+  color: #6b7280;
+}
+
+.repo-stars:hover, .repo-forks:hover {
+  color: #374151;
 }
 
 /* Language-specific colors */

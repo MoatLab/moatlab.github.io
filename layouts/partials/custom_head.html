@@ -9,3 +9,9 @@
   {{ $year_grouping_js := $year_grouping_js | resources.Minify }}
   <script src="{{ $year_grouping_js.RelPermalink }}" defer></script>
 {{ end }}
+
+{{ $github_stats_js := resources.Get "js/github-stats.js" }}
+{{ if $github_stats_js }}
+  {{ $github_stats_js := $github_stats_js | resources.Minify }}
+  <script src="{{ $github_stats_js.RelPermalink }}" defer></script>
+{{ end }}
