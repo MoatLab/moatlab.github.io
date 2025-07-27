@@ -27,7 +27,7 @@ publication_types: ['article-journal']
 
 # Publication name and optional abbreviated publication name.
 publication: '*IEEE Micro, 43*(3)'
-publication_short: '*IEEE Micro 2023*'
+publication_short: '*IEEE Micro*'
 
 abstract: 'This paper analyzes design tradeoffs in CXL-based memory pools for cloud platforms.'
 
