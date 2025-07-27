@@ -29,7 +29,7 @@ publication_types: ['paper-conference']
 
 # Publication name and optional abbreviated publication name.
 publication: In *Proceedings of the 28th ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS)*
-publication_short: ASPLOS 2023
+publication_short: ASPLOS '23
 award: "Distinguished Paper Award"
 
 abstract: 'This paper presents Pond, a CXL-based memory pooling system for cloud platforms.'

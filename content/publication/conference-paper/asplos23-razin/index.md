@@ -25,7 +25,7 @@ publication_types: ['paper-conference']
 
 # Publication name and optional abbreviated publication name.
 publication: In *Proceedings of the 28th ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS)*
-publication_short: In *ASPLOS 2023*
+publication_short: In *ASPLOS '23*
 
 abstract: 'This paper presents RAIZN, a redundant array system designed specifically for zoned namespaces (ZNS) SSDs, providing fault tolerance and performance optimization for modern storage systems.'
 
