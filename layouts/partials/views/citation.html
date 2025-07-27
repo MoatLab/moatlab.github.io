@@ -7,7 +7,7 @@
   <div class="year-block {{ if $isMoatlabEra }}moatlab-era{{ else }}pre-moatlab-era{{ end }}">{{ $year }}</div>
   <div class="publication-layout">
     <div class="publication-number-column">
-      <span class="publication-number">{{ add .index 1 }}</span>
+      <span class="publication-number">{{ if .index }}{{ add .index 1 }}{{ else }}1{{ end }}</span>
     </div>
     <div class="publication-content">
       <div class="publication-title">
