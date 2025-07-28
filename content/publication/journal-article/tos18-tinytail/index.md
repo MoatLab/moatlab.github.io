@@ -1,7 +1,7 @@
 ---
 title: "Tiny-Tail Flash: Near-Perfect Elimination of Garbage Collection Tail Latencies in NAND SSDs"
 number: 99
-authors: ["Huaicheng Li", "Shengan Zheng", "Minghao Hao", "Ming-Hung Tong", "Sundararaman Swaminathan", "Andrew A. Chien", "Haryadi S. Gunawi"]
+authors: ["Shiqin Yan", "Huaicheng Li", "Mingzhe Hao", "Michael Hao Tong", "Swaminatahan Sundararaman", "Andrew A. Chien", "Haryadi S. Gunawi"]
 date: 2017-06-01
 publication_types: ["2"]
 publication: "ACM Transactions on Storage"
