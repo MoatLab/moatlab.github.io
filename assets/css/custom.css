@@ -452,6 +452,8 @@
   height: auto;
 }
 
+/* Consistent sizing for all logos - remove Intel-specific rule */
+
 /* GitHub-style Repository Cards */
 .github-repos {
   display: grid;
@@ -633,12 +635,17 @@
     gap: 12px;
   }
 
-          .sponsor-grid {
-          grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-          gap: 0.5rem;
-        }
-        
-        .github-repos {
-          grid-template-columns: 1fr;
-        }
+  .sponsor-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 0.5rem;
+  }
+  
+  .sponsor-item img {
+    max-width: 140px;
+    max-height: 55px;
+  }
+  
+  .github-repos {
+    grid-template-columns: 1fr;
+  }
 }

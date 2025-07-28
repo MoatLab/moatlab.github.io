@@ -206,4 +206,20 @@ Our research group develops and maintains several open-source software projects 
 
 </div>
 
+<script>
+// Dynamically load GitHub stats JavaScript when this page is accessed
+document.addEventListener('DOMContentLoaded', function() {
+    // Load the GitHub stats script dynamically
+    const script = document.createElement('script');
+    script.src = '/js/github-stats.js';
+    script.onload = function() {
+        console.log('GitHub stats script loaded successfully');
+    };
+    script.onerror = function() {
+        console.error('Failed to load GitHub stats script');
+    };
+    document.head.appendChild(script);
+});
+</script>
+
 
