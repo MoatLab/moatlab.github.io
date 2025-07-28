@@ -74,7 +74,11 @@
           <a href="{{ $item.Params.url_slides }}" target="_blank">Slides</a>
         {{ end }}
       </div>
-      {{ if $item.Params.award }}
+      {{ if $item.Params.awards }}
+        {{ range $item.Params.awards }}
+          <div class="publication-award">{{ . }}</div>
+        {{ end }}
+      {{ else if $item.Params.award }}
         <div class="publication-award">{{ $item.Params.award }}</div>
       {{ end }}
     </div>
