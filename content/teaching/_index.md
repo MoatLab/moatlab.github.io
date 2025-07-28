@@ -3,7 +3,7 @@ title: ""
 description: ""
 ---
 
-I believe in hands-on, research-oriented teaching that connects theoretical concepts with real-world applications. My teaching approach emphasizes practical experience, research integration, collaborative learning, and industry relevance.
+We believe in hands-on, research-oriented teaching that connects theoretical concepts with real-world applications. Our teaching approach emphasizes practical experience, research integration, collaborative learning, and industry relevance.
 
 <div class="github-repos">
   <div class="repo-card">

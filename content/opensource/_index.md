@@ -3,7 +3,7 @@ title: ""
 description: ""
 ---
 
-Our research group develops and maintains several open-source software projects that contribute to the computer systems research community. All projects are hosted on our [GitHub organization](https://github.com/moatlab).
+Our research group develops and maintains several open-source software projects. All projects are hosted on our [GitHub organization](https://github.com/moatlab).
 
 <div class="github-repos">
   <div class="repo-card">
