@@ -21,7 +21,7 @@
             border-bottom: 1px solid #e5e7eb;
             position: sticky;
             top: 0;
-            z-index: 30;
+            z-index: 50;
         }
         
         .navbar {
@@ -62,12 +62,20 @@
         }
         
         .main-container {
-            max-width: 75%;
+            max-width: 90%;
             margin: 0 auto;
             padding: 2rem;
             background-color: white;
             min-height: 80vh;
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        /* Special width for project pages */
+        body.project-list .main-container {
+            max-width: 100%;
+            padding: 0;
+            box-shadow: none;
+            background-color: #f8f9fa;
         }
         
         /* Increase width for publications section specifically */
@@ -454,6 +462,7 @@
             <ul class="navbar-nav">
                 <li><a href="/" class="nav-link {{ if eq .RelPermalink "/" }}active{{ end }}">Home</a></li>
                 <li><a href="/publication/" class="nav-link {{ if eq .RelPermalink "/publication/" }}active{{ end }}">Papers</a></li>
+                <li><a href="/project/" class="nav-link {{ if eq .RelPermalink "/project/" }}active{{ end }}">Projects</a></li>
                 <li><a href="/teaching/" class="nav-link {{ if eq .RelPermalink "/teaching/" }}active{{ end }}">Courses</a></li>
                 <li><a href="/opensource/" class="nav-link {{ if eq .RelPermalink "/opensource/" }}active{{ end }}">Open-Source</a></li>
                 <li><a href="/sponsors/" class="nav-link {{ if eq .RelPermalink "/sponsors/" }}active{{ end }}">Sponsors</a></li>
@@ -461,10 +470,15 @@
         </nav>
     </div>
     
+    {{ if eq .Section "project" }}
+    <!-- Full width for project pages -->
+    {{ block "main" . }}{{ end }}
+    {{ else }}
     <div class="main-container">
         <div class="content">
             {{ block "main" . }}{{ end }}
         </div>
     </div>
+    {{ end }}
 </body>
 </html> 

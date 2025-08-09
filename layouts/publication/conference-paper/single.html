@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div style="max-width: 600px; margin: 100px auto; text-align: center; padding: 2rem;">
+  <h1 style="font-size: 2rem; color: #1f2937; margin-bottom: 1rem;">{{ .Title }}</h1>
+  
+  <p style="color: #6b7280; margin-bottom: 2rem;">Redirecting to publications list...</p>
+  
+  <a href="/publication/" style="display: inline-block; padding: 0.75rem 1.5rem; background: #861F41; color: white; border-radius: 8px; text-decoration: none; font-weight: 600;">
+    View All Publications
+  </a>
+  
+  <script>
+    // Auto-redirect after 2 seconds
+    setTimeout(function() {
+      window.location.href = '/publication/';
+    }, 2000);
+  </script>
+</div>
+{{ end }}

@@ -7,15 +7,18 @@ main:
   - name: Home
     url: /
     weight: 1
-  - name: Publications
+  - name: Papers
     url: /publication/
     weight: 2
-  - name: Open-Source
-    url: /opensource/
+  - name: Projects
+    url: /project/
     weight: 3
   - name: Courses
     url: /teaching/
     weight: 4
+  - name: Open-Source
+    url: /opensource/
+    weight: 5
   - name: Sponsors
     url: /sponsors/
-    weight: 5
+    weight: 6
