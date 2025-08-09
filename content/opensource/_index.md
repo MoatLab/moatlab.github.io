@@ -1,6 +1,6 @@
 ---
-title: ""
-description: ""
+title: "Open Source"
+description: "Open source software projects developed by the MoatLab research group"
 ---
 
 Our research group develops and maintains several open-source software projects. All projects are hosted on our [GitHub organization](https://github.com/moatlab).
@@ -27,7 +27,7 @@ Our research group develops and maintains several open-source software projects.
           <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24">
             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
           </svg>
-          18
+          19
         </span>
         <span class="repo-forks">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
@@ -60,13 +60,13 @@ Our research group develops and maintains several open-source software projects.
           <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24">
             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
           </svg>
-          10
+          13
         </span>
         <span class="repo-forks">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
             <path d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z"/>
           </svg>
-          0
+          3
         </span>
       </span>
     </div>
@@ -99,7 +99,7 @@ Our research group develops and maintains several open-source software projects.
           <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
             <path d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z"/>
           </svg>
-          218
+          219
         </span>
       </span>
     </div>

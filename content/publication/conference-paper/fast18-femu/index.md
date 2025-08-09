@@ -6,7 +6,7 @@ date: 2018-02-01
 publication_types: ["1"]
 publication: "In 16th USENIX Conference on File and Storage Technologies (FAST)"
 publication_short: "FAST '18"
-abstract: ""
+abstract: "We present FEMU, a QEMU-based flash emulator designed to be Cheap, Accurate, Scalable, and Extensible. FEMU accurately emulates the internal behavior of SSDs, including FTL mapping, garbage collection, wear leveling, and I/O scheduling. Unlike existing SSD emulators, FEMU achieves both high accuracy and performance by leveraging modern virtualization techniques. FEMU can emulate various SSD configurations and has been widely adopted by the research community for SSD-related research and development."
 featured: false
 image:
   caption: ""

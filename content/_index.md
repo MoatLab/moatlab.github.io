@@ -33,6 +33,17 @@ The <span style="color: #e5751f; font-weight: bold;">M</span><span style="color:
 <div class="people-grid vertical">
   <div class="person-card student vertical">
     <div class="person-image">
+      <img src="/students/berkay-inceisci.jpg" alt="Berkay Inceisci" style="object-fit: cover;">
+    </div>
+    <div class="person-info">
+      <h4 class="person-name"><a href="https://www.linkedin.com/in/berkayinceisci" target="_blank">Berkay Inceisci</a></h4>
+      <p class="person-title">PhD Student</p>
+      <p class="person-period">08/2025 - Present</p>
+    </div>
+  </div>
+
+  <div class="person-card student vertical">
+    <div class="person-image">
       <img src="/students/hansen-idden.jpg" alt="Hansen Idden">
     </div>
     <div class="person-info">

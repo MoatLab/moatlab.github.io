@@ -24,6 +24,14 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Loading GitHub stats...');
         statsLoaded = true;
         
+        // Add loading indicators
+        repos.forEach(repo => {
+            const element = document.getElementById(repo.elementId);
+            if (element) {
+                element.style.opacity = '0.6';
+            }
+        });
+        
         // Fetch stats for each repository
         repos.forEach(repo => {
             fetchRepoStats(repo.name, repo.elementId);
@@ -44,12 +52,27 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Also listen for navigation to the open-source page
-    if (window.location.pathname.includes('opensource') || 
-        window.location.pathname.includes('open-source')) {
-        // If we're already on the open-source page, load stats after a short delay
-        setTimeout(loadGitHubStats, 500);
+    // Auto-load stats if we're on the opensource page
+    function checkAndLoadStats() {
+        if (window.location.pathname.includes('opensource') || 
+            window.location.pathname.includes('open-source') ||
+            document.querySelector('.github-repos')) {
+            console.log('📦 Open source page detected, loading GitHub stats...');
+            setTimeout(loadGitHubStats, 50);
+        }
     }
+    
+    // Check immediately
+    checkAndLoadStats();
+    
+    // Also check after a short delay in case DOM isn't fully loaded
+    setTimeout(checkAndLoadStats, 500);
+    
+    // Force refresh stats button (optional - can be called manually)
+    window.refreshGitHubStats = function() {
+        statsLoaded = false;
+        loadGitHubStats();
+    };
 
     async function fetchRepoStats(repoName, elementId) {
         try {
@@ -76,30 +99,43 @@ document.addEventListener('DOMContentLoaded', function() {
             const forkSpan = element.querySelector('.repo-forks');
             
             if (starSpan) {
-                // Get all child nodes
-                const childNodes = Array.from(starSpan.childNodes);
-                
-                // Find the text node (should be the last one)
-                const textNode = childNodes.find(node => node.nodeType === Node.TEXT_NODE);
-                
-                if (textNode) {
-                    // Update only the text content
-                    textNode.textContent = ` ${stars}`;
+                // Simple approach: find the SVG, then replace everything after it
+                const svg = starSpan.querySelector('svg');
+                if (svg) {
+                    // Remove all text nodes after SVG
+                    const children = Array.from(starSpan.childNodes);
+                    children.forEach(child => {
+                        if (child.nodeType === Node.TEXT_NODE) {
+                            child.remove();
+                        }
+                    });
+                    // Add new text with star count
+                    starSpan.appendChild(document.createTextNode(` ${stars}`));
                 }
             }
             
             if (forkSpan) {
-                // Get all child nodes
-                const childNodes = Array.from(forkSpan.childNodes);
-                
-                // Find the text node (should be the last one)
-                const textNode = childNodes.find(node => node.nodeType === Node.TEXT_NODE);
-                
-                if (textNode) {
-                    // Update only the text content
-                    textNode.textContent = ` ${forks}`;
+                // Simple approach: find the SVG, then replace everything after it
+                const svg = forkSpan.querySelector('svg');
+                if (svg) {
+                    // Remove all text nodes after SVG
+                    const children = Array.from(forkSpan.childNodes);
+                    children.forEach(child => {
+                        if (child.nodeType === Node.TEXT_NODE) {
+                            child.remove();
+                        }
+                    });
+                    // Add new text with fork count
+                    forkSpan.appendChild(document.createTextNode(` ${forks}`));
                 }
             }
+            
+            // Add loading indicator removal and success styling
+            element.style.opacity = '1';
+            element.style.transition = 'opacity 0.3s ease';
+            console.log(`✅ Updated ${elementId}: ${stars} stars, ${forks} forks`);
+        } else {
+            console.error(`❌ Element with ID ${elementId} not found`);
         }
     }
 }); 

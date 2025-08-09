@@ -1,6 +1,6 @@
 ---
-title: ""
-description: ""
+title: "Teaching"
+description: "Computer systems courses taught by MoatLab faculty at Virginia Tech"
 ---
 
 We believe in hands-on, research-oriented teaching that connects theoretical concepts with real-world applications. Our teaching approach emphasizes practical experience, research integration, collaborative learning, and industry relevance.

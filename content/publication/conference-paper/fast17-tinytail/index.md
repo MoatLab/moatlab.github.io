@@ -7,7 +7,7 @@ publication_types: ["1"]
 publication: "In 15th USENIX Conference on File and Storage Technologies (FAST)"
 publication_short: "FAST '17"
 award: "Best Paper Nominee"
-abstract: ""
+abstract: "Garbage collection (GC) in NAND SSDs introduces long tail latencies that significantly impact application performance. We present Tiny-Tail Flash (TTFlash), a novel SSD design that near-perfectly eliminates GC-induced tail latencies. TTFlash introduces three key techniques: GC-tolerant read, GC-tolerant write, and GC-tolerant flush, which collectively ensure that GC operations do not block user I/O requests. Our evaluation shows that TTFlash reduces 99.99th percentile latencies by up to 79% compared to state-of-the-art SSDs while maintaining high throughput."
 featured: false
 image:
   caption: ""

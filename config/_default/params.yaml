@@ -20,11 +20,11 @@ appearance:
 # SEO
 marketing:
   seo:
-    site_type: Person
+    site_type: Organization
     local_business_type: ''
-    org_name: ''
-    description: 'The highly-customizable Hugo Academic theme powered by Hugo Blox Builder. Easily create your personal academic website.'
-    twitter: 'GetResearchDev'
+    org_name: 'MoatLab - Virginia Tech'
+    description: 'MoatLab research group at Virginia Tech conducts cutting-edge research in Memory Systems, Operating Systems, System Architecture, and Storage Systems for modern datacenters and cloud platforms.'
+    twitter: ''
   analytics:
     google_analytics: ''
     baidu_tongji: ''

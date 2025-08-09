@@ -27,6 +27,9 @@ organizations:
   - name: Virginia Tech
     url: https://cs.vt.edu/
 
+# Email for contact
+email: huaicheng@cs.vt.edu
+
 # Social network links
 profiles:
   - icon: at-symbol
