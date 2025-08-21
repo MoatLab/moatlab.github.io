@@ -284,13 +284,14 @@
 
         .people-grid.vertical {
             grid-template-columns: repeat(4, 1fr);
-            gap: 8px;
+            column-gap: 8px;
+            row-gap: 20px;
             max-width: 100%;
         }
         
-        /* Add more vertical spacing between student profiles in home section */
+        /* Add spacing between student rows */
         .people-grid.vertical .person-card.student {
-            margin-bottom: 24px;
+            margin-bottom: 0;
         }
 
         .person-card {
@@ -299,9 +300,9 @@
             align-items: center;
             text-align: center;
             border-radius: 8px;
-            padding: 16px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-            gap: 16px;
+            padding: 8px;
+            box-shadow: none;
+            gap: 0;
             max-width: 100%;
         }
 
@@ -316,15 +317,15 @@
         }
 
         .person-card.student {
-            background: white;
+            background: transparent;
         }
 
         .person-card.student.co-advised {
-            background: white;
+            background: transparent;
         }
 
         .person-card.student.visiting {
-            background: white;
+            background: transparent;
         }
 
         .person-image {
@@ -348,50 +349,62 @@
         }
 
         .person-info {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 4px;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            gap: 0 !important;
+            margin: 8px 0 0 0 !important;
+            padding: 0 !important;
         }
 
-        .person-name {
-            margin: 0;
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #2c3e50;
+        .person-name, .person-card h4 {
+            margin: 0 0 6px 0 !important;
+            padding: 0 !important;
+            font-size: 1.1rem !important;
+            font-weight: 600 !important;
+            color: #2c3e50 !important;
+            line-height: 1.4 !important;
+            display: block !important;
         }
 
         .person-card.faculty .person-name {
-            font-size: 1.4rem;
-            color: #2c3e50;
+            font-size: 1.4rem !important;
+            color: #2c3e50 !important;
         }
 
         .person-name a {
-            color: inherit;
-            text-decoration: none;
+            color: inherit !important;
+            text-decoration: none !important;
         }
 
         .person-name a:hover {
-            color: #861F41;
+            color: #861F41 !important;
         }
 
-        .person-title {
-            margin: 0;
-            font-size: 0.9rem;
-            color: #6b7280;
-            font-weight: 500;
+        .person-title, .person-card p:nth-of-type(1) {
+            margin: 0 0 5px 0 !important;
+            font-size: 0.9rem !important;
+            color: #6b7280 !important;
+            font-weight: 500 !important;
+            line-height: 1.4 !important;
+            padding: 0 !important;
+            display: block !important;
         }
 
         .person-email {
-            margin: 0;
-            font-size: 0.85rem;
-            color: #861F41;
+            margin: 0 0 5px 0 !important;
+            font-size: 0.85rem !important;
+            color: #861F41 !important;
+            line-height: 1.4 !important;
+            padding: 0 !important;
         }
 
-        .person-period {
-            margin: 0;
-            font-size: 0.8rem;
-            color: #9ca3af;
+        .person-period, .person-card p:nth-of-type(2) {
+            margin: 0 !important;
+            font-size: 0.8rem !important;
+            color: #9ca3af !important;
+            line-height: 1.4 !important;
+            padding: 0 !important;
         }
 
         .person-links {

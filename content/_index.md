@@ -5,8 +5,17 @@ description: "Computer Systems Research at Virginia Tech"
 
 
 
-The <span style="color: #e5751f; font-weight: bold;">M</span><span style="color: #e5751f; font-weight: bold;">oat</span><span style="color: #e5751f; font-weight: bold;">Lab</span> research group at Virginia Tech centers on core systems research in <span style="color: #e5751f; font-weight: bold;">M</span>emory Systems, <span style="color: #e5751f; font-weight: bold;">O</span>perating Systems, System <span style="color: #e5751f; font-weight: bold;">A</span>rchitecture, and s<span style="color: #e5751f; font-weight: bold;">T</span>orage Systems. We design and <span style="font-weight: bold">build</span> high-performance, efficient, and scalable computer systems that address real-world challenges in modern datacenters and cloud platforms. Our research encompasses memory management, storage optimization, software/hardware co-design, emerging technologies like CXL, and disaggregated architectures.
+<div class="hero-section">
+  <div class="hero-content">
+    <h1 class="hero-title">MoatLab</h1>
+    <p class="hero-subtitle">Systems Research at Virginia Tech</p>
+    <p class="hero-description">We design and build <strong>high-performance computer systems</strong> that power modern datacenters and cloud platforms. Our work directly addresses critical challenges in memory management, storage optimization, operating systems, and system architecture.</p>
+  </div>
+</div>
 
+<div class="section-divider"></div>
+
+<section class="faculty-section">
 
 ## Faculty
 
@@ -27,6 +36,12 @@ The <span style="color: #e5751f; font-weight: bold;">M</span><span style="color:
     </div>
   </div>
 </div>
+
+<div class="section-divider"></div>
+
+</section>
+
+<section class="students-section">
 
 ## Graduate Students
 
@@ -120,6 +135,12 @@ The <span style="color: #e5751f; font-weight: bold;">M</span><span style="color:
   </div>
 </div>
 
+<div class="section-divider"></div>
+
+</section>
+
+<section class="co-advised-section">
+
 ## Co-advised & Visiting
 
 <div class="people-grid vertical">
@@ -156,3 +177,5 @@ The <span style="color: #e5751f; font-weight: bold;">M</span><span style="color:
     </div>
   </div>
 </div>
+
+</section>
