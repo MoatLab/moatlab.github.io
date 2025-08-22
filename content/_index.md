@@ -48,7 +48,7 @@ description: "Computer Systems Research at Virginia Tech"
 <div class="people-grid vertical">
   <div class="person-card student vertical">
     <div class="person-image">
-      <img src="/students/berkay-inceisci.jpg" alt="Berkay Inceisci" style="object-fit: cover;">
+      <img src="/students/berkay-inceisci.jpg" alt="Berkay Inceisci" loading="lazy" style="object-fit: cover;">
     </div>
     <div class="person-info">
       <h4 class="person-name"><a href="https://www.linkedin.com/in/berkayinceisci" target="_blank">Berkay Inceisci</a></h4>
@@ -59,7 +59,7 @@ description: "Computer Systems Research at Virginia Tech"
 
   <div class="person-card student vertical">
     <div class="person-image">
-      <img src="/students/hansen-idden.jpg" alt="Hansen Idden">
+      <img src="/students/hansen-idden.jpg" alt="Hansen Idden" loading="lazy">
     </div>
     <div class="person-info">
       <h4 class="person-name"><a href="https://hansenidden18.github.io/" target="_blank">Hansen Idden</a></h4>
@@ -70,7 +70,7 @@ description: "Computer Systems Research at Virginia Tech"
 
   <div class="person-card student vertical">
     <div class="person-image">
-      <img src="/students/sijia-li.jpg" alt="Sijia Li">
+      <img src="/students/sijia-li.jpg" alt="Sijia Li" loading="lazy">
     </div>
     <div class="person-info">
       <h4 class="person-name"><a href="https://sijia-li.github.io/" target="_blank">Sijia Li</a></h4>
@@ -81,7 +81,7 @@ description: "Computer Systems Research at Virginia Tech"
 
   <div class="person-card student vertical">
     <div class="person-image">
-      <img src="/students/hanchen-xu.jpg" alt="Hanchen Xu">
+      <img src="/students/hanchen-xu.jpg" alt="Hanchen Xu" loading="lazy">
     </div>
     <div class="person-info">
       <h4 class="person-name"><a href="https://hanry.me/" target="_blank">Hanchen Xu</a></h4>
@@ -92,7 +92,7 @@ description: "Computer Systems Research at Virginia Tech"
 
   <div class="person-card student vertical">
     <div class="person-image">
-      <img src="/students/shoaib-qazi.jpg" alt="Shoaib Qazi">
+      <img src="/students/shoaib-qazi.jpg" alt="Shoaib Qazi" loading="lazy">
     </div>
     <div class="person-info">
       <h4 class="person-name"><a href="https://shoaibcs.github.io/" target="_blank">Shoaib Qazi</a></h4>
@@ -103,7 +103,7 @@ description: "Computer Systems Research at Virginia Tech"
 
   <div class="person-card student vertical">
     <div class="person-image">
-      <img src="/students/jinshu-liu.jpg" alt="Jinshu Liu">
+      <img src="/students/jinshu-liu.jpg" alt="Jinshu Liu" loading="lazy">
     </div>
     <div class="person-info">
       <h4 class="person-name"><a href="https://people.cs.vt.edu/jinshu/" target="_blank">Jinshu Liu</a></h4>
@@ -114,7 +114,7 @@ description: "Computer Systems Research at Virginia Tech"
 
   <div class="person-card student vertical">
     <div class="person-image">
-      <img src="/students/hamid-hadian.jpg" alt="Hamid Hadian">
+      <img src="/students/hamid-hadian.jpg" alt="Hamid Hadian" loading="lazy">
     </div>
     <div class="person-info">
       <h4 class="person-name"><a href="https://hamidhadian.github.io/" target="_blank">Hamid Hadian</a></h4>
@@ -125,7 +125,7 @@ description: "Computer Systems Research at Virginia Tech"
 
   <div class="person-card student vertical">
     <div class="person-image">
-      <img src="/students/sumit-monga.jpg" alt="Sumit Monga">
+      <img src="/students/sumit-monga.jpg" alt="Sumit Monga" loading="lazy">
     </div>
     <div class="person-info">
       <h4 class="person-name"><a href="https://www.linkedin.com/in/sumit-kumar-monga-611a75101/" target="_blank">Sumit Monga</a></h4>
@@ -146,7 +146,7 @@ description: "Computer Systems Research at Virginia Tech"
 <div class="people-grid vertical">
   <div class="person-card student vertical co-advised">
     <div class="person-image">
-      <img src="/students/inho-song.jpg" alt="Inho Song">
+      <img src="/students/inho-song.jpg" alt="Inho Song" loading="lazy">
     </div>
     <div class="person-info">
       <h4 class="person-name"><a href="https://inhoinno.github.io/cv/" target="_blank">Inho Song</a></h4>
@@ -157,7 +157,7 @@ description: "Computer Systems Research at Virginia Tech"
 
   <div class="person-card student vertical visiting">
     <div class="person-image">
-      <img src="/students/yuyue-wang.jpg" alt="Yuyue Wang">
+      <img src="/students/yuyue-wang.jpg" alt="Yuyue Wang" loading="lazy">
     </div>
     <div class="person-info">
       <h4 class="person-name"><a href="http://web.cs.ucla.edu/~yuyue/" target="_blank">Yuyue Wang</a></h4>
@@ -168,7 +168,7 @@ description: "Computer Systems Research at Virginia Tech"
 
   <div class="person-card student vertical co-advised">
     <div class="person-image">
-      <img src="/students/yuze-li.jpg" alt="Yuze Li">
+      <img src="/students/yuze-li.jpg" alt="Yuze Li" loading="lazy">
     </div>
     <div class="person-info">
       <h4 class="person-name"><a href="https://people.cs.vt.edu/lyuze/" target="_blank">Yuze Li</a></h4>
