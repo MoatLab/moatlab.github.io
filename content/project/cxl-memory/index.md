@@ -6,5 +6,5 @@ tags:
   - Memory Systems
   - Cloud Infrastructure
   - Disaggregation
-summary: Building next-generation memory pooling systems using CXL technology for efficient resource sharing in cloud platforms
+summary: Building memory pooling/disaggregation systems with CXL
 ---
