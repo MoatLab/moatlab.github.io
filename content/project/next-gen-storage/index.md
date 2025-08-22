@@ -5,7 +5,7 @@ tags:
   - Storage Systems
   - NVMe
   - Storage Architecture
-summary: Designing storage stack for modern datacenter applications.
+summary: Designing next-generation storage stack for modern datacenter applications
 ---
 
 ## Overview
