@@ -414,6 +414,14 @@ section.co-advised-section {
   margin-bottom: 16px;
 }
 
+/* Publication page container */
+.publication-page {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 /* Publication Entry (for the citation view) */
 .publication-entry {
   background: transparent;
@@ -425,6 +433,7 @@ section.co-advised-section {
   border-bottom: none !important;
   transition: none;
   counter-increment: publication-counter;
+  max-width: 100%;
 }
 
 /* Remove any border-bottom from publication entry children */
@@ -480,13 +489,14 @@ section.co-advised-section {
 }
 
 .publication-entry .publication-number-column {
-  flex-shrink: 0;
+  flex: 0 0 auto;
   width: 60px;
   display: flex;
   justify-content: center;
   align-items: baseline;
   padding-top: 0;
   line-height: 1.4;
+  text-align: center;
 }
 
 .publication-entry .publication-content {
@@ -497,6 +507,9 @@ section.co-advised-section {
   margin-bottom: 0;
   padding-bottom: 0; /* Remove negative padding */
   background: transparent;
+  min-width: 0; /* Allow content to shrink */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .publication-entry .publication-title {
@@ -585,9 +598,18 @@ section.co-advised-section {
 
 /* This rule is now handled above */
 
+/* Main article container for publication pages */
+article.publication-page {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 /* Year Grouping Styles */
 .publications-container {
   counter-reset: publication-counter year-counter;
+  max-width: 100%;
+  overflow-x: hidden;
+  padding: 0 1rem;
 }
 
 /* Year block styling */
@@ -601,7 +623,11 @@ section.co-advised-section {
   padding-top: 8px; /* Added top padding */
   padding-bottom: 12px;
   border-bottom: 2px solid #e5e7eb !important;
-  margin-left: -80px; /* Move further to the left */
+  margin-left: 0; /* Remove negative margin */
+  position: sticky;
+  left: 0;
+  background: white;
+  z-index: 10;
 }
 
 /* Gray color for 2021 and earlier years */
@@ -616,6 +642,7 @@ section.co-advised-section {
   display: flex;
   align-items: flex-start;
   gap: 12px;
+  min-width: 0; /* Allow flex items to shrink */
 }
 
 /* Ensure publication number column aligns properly */
@@ -623,6 +650,7 @@ section.co-advised-section {
   flex-shrink: 0;
   display: flex;
   align-items: flex-start;
+  min-width: 60px;
 }
 
 
@@ -661,10 +689,72 @@ section.co-advised-section {
 }
 
 /* Responsive design */
+@media (max-width: 1200px) {
+  .publications-container {
+    padding: 0 0.5rem;
+  }
+  
+  .publication-entry .publication-number-column {
+    min-width: 50px;
+  }
+  
+  .publication-entry .publication-title {
+    font-size: 1.05rem;
+  }
+  
+  .year-block {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .publication-entry .publication-number-column {
+    min-width: 45px;
+  }
+  
+  .publication-entry .publication-links {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+  
+  .year-block {
+    font-size: 1.3rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .publications-container {
+    padding: 0;
+  }
+
   .publication-layout {
-    flex-direction: column;
-    gap: 16px;
+    flex-direction: row;
+    gap: 8px;
+  }
+  
+  .publication-entry .publication-number-column {
+    min-width: 40px;
+  }
+  
+  .publication-entry .publication-number {
+    font-size: 1rem;
+  }
+  
+  .publication-entry .publication-title {
+    font-size: 1rem;
+  }
+  
+  .publication-entry .publication-authors {
+    font-size: 0.9rem;
+  }
+  
+  .publication-entry .publication-venue {
+    font-size: 0.85rem;
+  }
+  
+  .publication-entry .publication-links a {
+    font-size: 0.75rem;
+    padding: 3px 6px;
   }
 
   .publication-venue-badge {
@@ -681,11 +771,35 @@ section.co-advised-section {
   }
 
   .year-block {
-    float: none;
-    display: inline-block;
+    font-size: 1.2rem;
     margin-bottom: 12px;
-    font-size: 0.9rem;
     padding: 6px 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .publication-entry .publication-number-column {
+    min-width: 35px;
+  }
+  
+  .publication-entry .publication-number {
+    font-size: 0.95rem;
+  }
+  
+  .publication-entry .publication-title {
+    font-size: 0.95rem;
+  }
+  
+  .publication-entry .publication-authors {
+    font-size: 0.85rem;
+  }
+  
+  .publication-entry .publication-venue {
+    font-size: 0.8rem;
+  }
+  
+  .year-block {
+    font-size: 1.1rem;
   }
 }
 
