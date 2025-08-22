@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Site.Title }}</title>
-    <link rel="stylesheet" href="/css/themes/blue.min.css">
-    <link href="/dist/wc.min.css" rel="stylesheet">
+    {{ $styles := resources.Get "css/custom.css" | resources.Minify }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
     {{ partial "custom_head.html" . }}
     <style>
         body {
@@ -182,7 +182,7 @@
         }
 
         .publication-title a:hover {
-            color: #861F41;
+            color: var(--vt-maroon);
             text-decoration: underline;
         }
 
@@ -194,7 +194,7 @@
 
         .moatlab-author {
             text-decoration: underline;
-            color: #861F41;
+            color: var(--vt-maroon);
         }
 
         .pi-author {
@@ -209,7 +209,7 @@
 
         .publication-venue {
             font-size: 0.9rem;
-            color: #861F41;
+            color: var(--vt-maroon);
             font-weight: 500;
             margin-bottom: 0.5rem;
         }
@@ -219,7 +219,7 @@
         }
 
         .publication-links a {
-            color: #861F41;
+            color: var(--vt-maroon);
             text-decoration: none;
             margin-right: 1rem;
         }
@@ -378,7 +378,7 @@
         }
 
         .person-name a:hover {
-            color: #861F41 !important;
+            color: var(--vt-maroon) !important;
         }
 
         .person-title, .person-card p:nth-of-type(1) {
@@ -394,7 +394,7 @@
         .person-email {
             margin: 0 0 5px 0 !important;
             font-size: 0.85rem !important;
-            color: #861F41 !important;
+            color: var(--vt-maroon) !important;
             line-height: 1.4 !important;
             padding: 0 !important;
         }
@@ -414,7 +414,7 @@
         }
 
         .person-links a {
-            color: #861F41;
+            color: var(--vt-maroon);
             text-decoration: none;
             font-size: 0.85rem;
             font-weight: 500;
