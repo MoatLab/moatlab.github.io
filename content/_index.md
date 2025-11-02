@@ -123,16 +123,6 @@ description: "Computer Systems Research at Virginia Tech"
     </div>
   </div>
 
-  <div class="person-card student vertical">
-    <div class="person-image">
-      <img src="/students/sumit-monga.jpg" alt="Sumit Monga" loading="lazy">
-    </div>
-    <div class="person-info">
-      <h4 class="person-name"><a href="https://www.linkedin.com/in/sumit-kumar-monga-611a75101/" target="_blank">Sumit Monga</a></h4>
-      <p class="person-title">PhD Student</p>
-      <p class="person-period">08/2019 - Present</p>
-    </div>
-  </div>
 </div>
 
 <div class="section-divider"></div>
@@ -166,6 +156,7 @@ description: "Computer Systems Research at Virginia Tech"
     </div>
   </div>
 
+  <!--
   <div class="person-card student vertical co-advised">
     <div class="person-image">
       <img src="/students/yuze-li.jpg" alt="Yuze Li" loading="lazy">
@@ -174,6 +165,37 @@ description: "Computer Systems Research at Virginia Tech"
       <h4 class="person-name"><a href="https://people.cs.vt.edu/lyuze/" target="_blank">Yuze Li</a></h4>
       <p class="person-title">PhD Student</p>
       <p class="person-period">Primary: Ali Butt</p>
+    </div>
+  </div>
+  -->
+</div>
+
+<div class="section-divider"></div>
+
+</section>
+
+<section class="alumni-section">
+
+## Alumni
+
+<div class="people-grid vertical">
+  <div class="person-card student vertical alumni">
+    <div class="person-image">
+      <img src="/students/sumit-monga.jpg" alt="Sumit Monga" loading="lazy">
+    </div>
+    <div class="person-info">
+      <h4 class="person-name"><a href="https://www.linkedin.com/in/sumit-kumar-monga-611a75101/" target="_blank">Sumit Monga</a></h4>
+      <p class="person-title">PhD ('25) → Postdoc@Inria</p>
+    </div>
+  </div>
+
+  <div class="person-card student vertical alumni">
+    <div class="person-image">
+      <img src="/students/subhalakshmi-selvanathan.jpg" alt="Subhalakshmi Selvanathan" loading="lazy">
+    </div>
+    <div class="person-info">
+      <h4 class="person-name"><a href="https://www.linkedin.com/in/subhalakshmi-selvanathan/" target="_blank">Subhalakshmi Selvanathan</a></h4>
+      <p class="person-title">MS ('24) → Microsoft</p>
     </div>
   </div>
 </div>
