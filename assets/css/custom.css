@@ -536,6 +536,13 @@ section.co-advised-section {
   margin-bottom: 0.05rem;
 }
 
+.publication-entry .author-notes {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-style: italic;
+  margin-bottom: 0.15rem;
+}
+
 .publication-entry .publication-venue {
   font-size: 0.9rem;
   color: var(--vt-maroon);

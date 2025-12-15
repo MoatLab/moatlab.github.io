@@ -5,10 +5,12 @@ number: 1
 # Authors
 authors:
   - Hamid Hadian
-  - Jinshu Liu
-  - Hanchen Xu
+  - Jinshu Liu*
+  - Hanchen Xu*
   - Hansen Idden
   - Huaicheng Li
+
+author_notes: "* Equal contribution"
 
 date: '2026-04-01T00:00:00Z'
 doi: ''
@@ -55,6 +57,8 @@ projects: []
 # Slides
 slides: ""
 ---
+
+*Jinshu Liu and Hanchen Xu contributed equally to this work.
 
 **Conference:** ASPLOS'26 (30th ACM International Conference on Architectural Support for Programming Languages and Operating Systems)
 

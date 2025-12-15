@@ -4,12 +4,14 @@ number: 3
 
 # Authors
 authors:
-  - Dongha Yoon
-  - Hansen Idden
+  - Dongha Yoon*
+  - Hansen Idden*
   - Jinshu Liu
   - Berkay Inceisci
   - Sam H. Noh
   - Huaicheng Li
+
+author_notes: "* Co-lead authors"
 
 date: '2026-02-01T00:00:00Z'
 doi: ''
@@ -57,6 +59,8 @@ projects: []
 # Slides
 slides: ""
 ---
+
+*Dongha Yoon and Hansen Idden are co-lead authors.
 
 **Conference:** FAST'26 (24th USENIX Conference on File and Storage Technologies)
 

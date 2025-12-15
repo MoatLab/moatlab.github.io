@@ -49,7 +49,10 @@
       <span class="external-author">Authors not specified</span>
     {{ end }}
   </div>
-  
+  {{ if $item.Params.author_notes }}
+  <div class="author-notes">{{ $item.Params.author_notes }}</div>
+  {{ end }}
+
   <div class="publication-venue">
     {{ if $item.Params.publication_short }}
       {{ $venue := $item.Params.publication_short | replaceRE "In \\*" "" | replaceRE "\\*" "" }}
