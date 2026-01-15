@@ -1,6 +1,6 @@
 ---
-title: 'Lightweight and Accurate Performance Prediction for Heterogeneous Memory Systems'
-number: 2
+title: 'Performance Predictability in Heterogeneous Memory'
+number: 1
 
 # Authors
 authors:
@@ -26,7 +26,7 @@ publication_short: In *ASPLOS '26*
 abstract: ''
 
 # Summary. An optional shortened abstract.
-summary: 'Lightweight and accurate performance prediction for heterogeneous memory systems.'
+summary: 'Performance predictability in heterogeneous memory.'
 
 tags:
   - Memory Systems

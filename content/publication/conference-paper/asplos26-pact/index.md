@@ -1,6 +1,6 @@
 ---
-title: 'PACT: Fine-Grained Online Criticality-Driven Memory Tiering'
-number: 1
+title: 'PACT: A Criticality-First Design for Tiered Memory'
+number: 2
 
 # Authors
 authors:
@@ -28,7 +28,7 @@ publication_short: In *ASPLOS '26*
 abstract: ''
 
 # Summary. An optional shortened abstract.
-summary: 'Fine-grained online criticality-driven memory tiering.'
+summary: 'A criticality-first design for tiered memory.'
 
 tags:
   - CXL
