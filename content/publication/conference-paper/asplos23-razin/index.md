@@ -46,6 +46,7 @@ links:
   url: https://huaicheng.github.io/p/asplos23-razin.pdf
 
 url_pdf: 'https://huaicheng.github.io/p/asplos23-razin.pdf'
+url_bib: '/bib/asplos23-razin.bib'
 
 # Featured image
 image:

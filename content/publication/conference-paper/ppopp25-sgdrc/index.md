@@ -47,6 +47,7 @@ links:
   url: https://dl.acm.org/doi/10.1145/3710848.3710863
 
 url_pdf: 'https://huaicheng.github.io/p/ppopp25-sgdrc.pdf'
+url_bib: '/bib/ppopp25-sgdrc.bib'
 
 # Featured image
 image:

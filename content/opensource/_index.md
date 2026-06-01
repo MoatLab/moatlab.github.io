@@ -3,9 +3,109 @@ title: "Open Source"
 description: "Open source software projects developed by the MoatLab research group"
 ---
 
-Our research group develops and maintains several open-source software projects. All projects are hosted on our [GitHub organization](https://github.com/moatlab).
+We believe open-source artifacts are how systems research compounds, even more so in the agentic coding era. We aim to open-source the artifacts behind every paper we publish, each released under a permissive license (MIT or similar) with the goal of being directly reusable. All projects are hosted on our [GitHub organization](https://github.com/moatlab).
 
 <div class="github-repos">
+  <div class="repo-card">
+    <div class="repo-header">
+      <div class="repo-title">
+        <span class="repo-icon">🧭</span>
+        <a href="https://github.com/MoatLab/PACT" class="repo-name">PACT</a>
+        <span class="repo-visibility">Public</span>
+      </div>
+    </div>
+    <div class="repo-description">
+      A Criticality-First Design for Tiered Memory (ASPLOS'26, Best Paper Honorable Mention)
+    </div>
+    <div class="repo-meta">
+      <span class="repo-stats" id="pact-stats">
+        <span class="repo-stars">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <span class="loading">...</span>
+        </span>
+        <span class="repo-forks">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z"/></svg>
+          <span class="loading">...</span>
+        </span>
+      </span>
+    </div>
+  </div>
+
+  <div class="repo-card">
+    <div class="repo-header">
+      <div class="repo-title">
+        <span class="repo-icon">📈</span>
+        <a href="https://github.com/MoatLab/CAMP" class="repo-name">CAMP</a>
+        <span class="repo-visibility">Public</span>
+      </div>
+    </div>
+    <div class="repo-description">
+      Performance Predictability in Heterogeneous Memory (ASPLOS'26)
+    </div>
+    <div class="repo-meta">
+      <span class="repo-stats" id="camp-stats">
+        <span class="repo-stars">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <span class="loading">...</span>
+        </span>
+        <span class="repo-forks">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z"/></svg>
+          <span class="loading">...</span>
+        </span>
+      </span>
+    </div>
+  </div>
+
+  <div class="repo-card">
+    <div class="repo-header">
+      <div class="repo-title">
+        <span class="repo-icon">🛰️</span>
+        <a href="https://github.com/MoatLab/Cylon" class="repo-name">Cylon</a>
+        <span class="repo-visibility">Public</span>
+      </div>
+    </div>
+    <div class="repo-description">
+      Fast and Accurate Full-System Emulation of CXL-SSDs (FAST'26, Artifacts Available + Functional + Reproduced)
+    </div>
+    <div class="repo-meta">
+      <span class="repo-stats" id="cylon-stats">
+        <span class="repo-stars">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <span class="loading">...</span>
+        </span>
+        <span class="repo-forks">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z"/></svg>
+          <span class="loading">...</span>
+        </span>
+      </span>
+    </div>
+  </div>
+
+  <div class="repo-card">
+    <div class="repo-header">
+      <div class="repo-title">
+        <span class="repo-icon">📦</span>
+        <a href="https://github.com/MoatLab/WARP-earlyaccess" class="repo-name">WARP</a>
+        <span class="repo-visibility">Public</span>
+      </div>
+    </div>
+    <div class="repo-description">
+      Characterizing and Emulating FDP SSDs (FAST'26, Artifacts Available + Functional)
+    </div>
+    <div class="repo-meta">
+      <span class="repo-stats" id="warp-stats">
+        <span class="repo-stars">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <span class="loading">...</span>
+        </span>
+        <span class="repo-forks">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z"/></svg>
+          <span class="loading">...</span>
+        </span>
+      </span>
+    </div>
+  </div>
+
   <div class="repo-card">
     <div class="repo-header">
       <div class="repo-title">

@@ -15,6 +15,7 @@ image:
 url_pdf: "https://huaicheng.github.io/p/fast18-femu.pdf"
 url_code: "https://github.com/ucare-uchicago/femu"
 url_slides: ""
+url_bib: '/bib/fast18-femu.bib'
 url_video: ""
 url_dataset: ""
 url_poster: ""

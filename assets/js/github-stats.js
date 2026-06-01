@@ -7,6 +7,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Repository configurations
     const repos = [
+        { name: 'MoatLab/PACT', elementId: 'pact-stats' },
+        { name: 'MoatLab/CAMP', elementId: 'camp-stats' },
+        { name: 'MoatLab/Cylon', elementId: 'cylon-stats' },
+        { name: 'MoatLab/WARP-earlyaccess', elementId: 'warp-stats' },
         { name: 'moatlab/Melody', elementId: 'melody-stats' },
         { name: 'moatlab/SoarAlto', elementId: 'soaralto-stats' },
         { name: 'moatlab/FEMU', elementId: 'femu-stats' },

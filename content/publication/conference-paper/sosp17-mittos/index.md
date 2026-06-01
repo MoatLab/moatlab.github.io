@@ -15,6 +15,7 @@ image:
 url_pdf: "https://huaicheng.github.io/p/sosp17-mittos.pdf"
 url_code: ""
 url_slides: ""
+url_bib: '/bib/sosp17-mittos.bib'
 url_video: ""
 url_dataset: ""
 url_poster: ""

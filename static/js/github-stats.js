@@ -2,6 +2,10 @@
 // Fetches real-time star and fork counts from GitHub API
 
 const repositories = [
+    { id: 'pact-stats', repo: 'MoatLab/PACT' },
+    { id: 'camp-stats', repo: 'MoatLab/CAMP' },
+    { id: 'cylon-stats', repo: 'MoatLab/Cylon' },
+    { id: 'warp-stats', repo: 'MoatLab/WARP-earlyaccess' },
     { id: 'melody-stats', repo: 'MoatLab/Melody' },
     { id: 'soaralto-stats', repo: 'MoatLab/SoarAlto' },
     { id: 'femu-stats', repo: 'MoatLab/FEMU' },

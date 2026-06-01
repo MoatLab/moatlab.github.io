@@ -44,6 +44,7 @@ links:
   url: https://huaicheng.github.io/p/systor22-queenie.pdf
 
 url_pdf: 'https://huaicheng.github.io/p/systor22-queenie.pdf'
+url_bib: '/bib/systor22-queenie.bib'
 url_code: 'https://github.com/ucare-uchicago/Queenie'
 
 # Featured image

@@ -1,3 +1,26 @@
+{{/* Open Graph + Twitter Card — Tier 1 T1-8.
+     One image (`moatlab-logo.png`) for all pages so Slack/Twitter preview is consistent.
+     Per-page title/description fall back to the site defaults. */}}
+{{- $site_title := "MoatLab @ Virginia Tech" -}}
+{{- $site_desc := site.Params.marketing.seo.description | default "MoatLab research group at Virginia Tech: memory, OS, architecture, and storage systems." -}}
+{{- $title := cond .IsHome $site_title (printf "%s · MoatLab" .Title) -}}
+{{- $desc := cond (or (eq .Kind "home") (not .Description)) $site_desc .Description -}}
+{{- $img := absURL "moatlab-pics/moatlab-logo.png" -}}
+{{- $url := absURL .RelPermalink -}}
+<meta name="description" content="{{ $desc }}">
+<meta property="og:type" content="{{ cond .IsPage "article" "website" }}">
+<meta property="og:site_name" content="MoatLab">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:url" content="{{ $url }}">
+<meta property="og:image" content="{{ $img }}">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $desc }}">
+<meta name="twitter:image" content="{{ $img }}">
+<link rel="canonical" href="{{ $url }}">
+<link rel="icon" type="image/png" href="/moatlab-pics/moatlab-logo.png">
+
 {{ $custom_css := resources.Get "css/custom.css" }}
 {{ if $custom_css }}
   {{ $custom_css := $custom_css | resources.Minify }}

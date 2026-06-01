@@ -1,0 +1,11 @@
+{{/* MoatLab default list template.
+     The HugoBlox theme's _default/list.html paginates child pages AND renders
+     them via render_view, which polluted /opensource/, /teaching/, /sponsors/,
+     /join/ with duplicated content. We render only the section's own .Content.
+     Sections that DO want paginated children (news, publication) have their
+     own list template under layouts/<section>/list.html. */}}
+{{ define "main" }}
+<article class="moat-section-page">
+  {{ .Content }}
+</article>
+{{ end }}

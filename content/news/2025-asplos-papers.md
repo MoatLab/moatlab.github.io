@@ -1,33 +1,15 @@
 ---
-title: "Three Papers Accepted at ASPLOS 2025"
-date: 2024-12-15T00:00:00Z
+title: "Three papers accepted at ASPLOS '25 and PPoPP '25"
+date: 2024-12-15
 draft: false
 category: "publications"
 featured: true
-summary: "MoatLab has three papers accepted at ASPLOS 2025, covering CXL memory characterization, tiered memory management, and GPU resource control."
-tags: ["asplos", "conference", "publications"]
-authors: ["Jinshu Liu", "Hamid Hadian", "Yuyue Wang", "Daniel S. Berger", "Marie Nguyen", "Xun Jian", "Sam H. Noh", "Huaicheng Li"]
-links:
-  - name: "Melody Paper"
-    url: "/publication/conference-paper/asplos25-melody/"
-  - name: "SoarAlto Paper"
-    url: "/publication/conference-paper/osdi25-soaralto/"
-  - name: "SGDRC Paper"
-    url: "/publication/conference-paper/ppopp25-sgdrc/"
+summary: "Two MoatLab papers accepted to ASPLOS '25 (Melody, CAMP) plus one to PPoPP '25 (SGDRC)."
+tags: ["asplos", "ppopp", "publications", "cxl"]
 ---
 
-We are excited to announce that MoatLab has three papers accepted at the 29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS 2025)!
+Three MoatLab papers were accepted in the 2024-25 conference cycle:
 
-## Accepted Papers:
-
-1. **Melody: Systematic CXL Memory Characterization and Performance Analysis at Scale**
-   - Authors: Jinshu Liu, Hamid Hadian, Yuyue Wang, Daniel S. Berger, Marie Nguyen, Xun Jian, Sam H. Noh, Huaicheng Li
-   - First comprehensive characterization of CXL memory systems at scale
-
-2. **SoarAlto: Tiered Memory Management Beyond Hotness**
-   - Novel approaches to tiered memory management that go beyond traditional hotness-based policies
-
-3. **SGDRC: Software-Defined Dynamic Resource Control for Concurrent DNN Inference on NVIDIA GPUs**
-   - Dynamic resource control system for efficient GPU sharing in DNN inference
-
-Congratulations to all the authors! See you in Rotterdam, Netherlands in March 2025!
+- [**Systematic CXL Memory Characterization and Performance Analysis at Scale**](/publication/conference-paper/asplos25-melody/) (Melody), ASPLOS '25
+- [**Performance Predictability in Heterogeneous Memory**](/publication/conference-paper/asplos26-predict/) (CAMP), ASPLOS '26
+- [**SGDRC: Software-Defined Dynamic Resource Control for Concurrent DNN Inference on NVIDIA GPUs**](/publication/conference-paper/ppopp25-sgdrc/), PPoPP '25

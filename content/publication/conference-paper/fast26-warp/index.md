@@ -41,9 +41,15 @@ featured: true
 # Custom links
 links: []
 
-url_pdf: ''
-url_code: ''
-url_slides: ''
+url_pdf: 'https://huaicheng.github.io/p/fast26-warp.pdf'
+url_code: 'https://github.com/MoatLab/WARP-earlyaccess'
+url_slides: 'https://huaicheng.github.io/s/fast26-warp-slides.pdf'
+url_bib: '/bib/fast26-warp.bib'
+url_poster: 'https://huaicheng.github.io/p/fast26-warp-poster.pdf'
+
+# Artifact-evaluation badges (USENIX FAST '26 verified)
+artifact_badges: ['available', 'functional']
+badge_set: 'usenix'
 
 # Featured image
 image:

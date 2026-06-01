@@ -1,0 +1,13 @@
+{{ define "main" }}
+<article class="news-list">
+  <h1 class="news-list__title">{{ .Title }}</h1>
+  <ul class="news-list__items">
+    {{ range (where .Site.RegularPages "Section" "news").ByDate.Reverse }}
+      <li class="news-line">
+        <span class="news-line__date">{{ .Date.Format "01/2006" }}</span>
+        <span class="news-line__title">{{ .Title }}</span>
+      </li>
+    {{ end }}
+  </ul>
+</article>
+{{ end }}

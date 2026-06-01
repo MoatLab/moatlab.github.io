@@ -50,6 +50,7 @@ links:
 url_pdf: 'https://huaicheng.github.io/p/sosp21-ioda.pdf'
 url_code: 'https://github.com/MoatLab/IODA-SOSP21-AE'
 url_slides: 'https://huaicheng.github.io/s/sosp21-ioda-slides.pdf'
+url_bib: '/bib/sosp21-ioda.bib'
 
 # Featured image
 image:

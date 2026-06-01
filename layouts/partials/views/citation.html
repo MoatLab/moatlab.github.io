@@ -66,6 +66,19 @@
     {{ end }}
   </div>
   
+      {{ with $item.Params.artifact_badges }}
+        {{ $set := $item.Params.badge_set | default "acm" }}
+        {{ $linkUrl := cond (eq $set "usenix") "https://secartifacts.github.io/usenixfast2026/" "https://www.acm.org/publications/policies/artifact-review-and-badging-current" }}
+        <div class="publication-badges">
+          {{ range . }}
+            {{ $label := index (dict "available" "Artifacts Available" "functional" "Artifacts Functional" "reproduced" "Results Reproduced") . }}
+            {{ $src := cond (eq $set "usenix") (printf "/img/usenix_%s.svg" .) (printf "/img/acm_%s_1.1.png" .) }}
+            <a href="{{ $linkUrl }}" title="{{ $label }}" target="_blank" rel="noopener">
+              <img src="{{ $src }}" width="44" alt="{{ $label }}" />
+            </a>
+          {{ end }}
+        </div>
+      {{ end }}
       <div class="publication-links">
         {{ if $item.Params.url_pdf }}
           <a href="{{ $item.Params.url_pdf }}" target="_blank">PDF</a>
@@ -75,6 +88,12 @@
         {{ end }}
         {{ if $item.Params.url_slides }}
           <a href="{{ $item.Params.url_slides }}" target="_blank">Slides</a>
+        {{ end }}
+        {{ if $item.Params.url_poster }}
+          <a href="{{ $item.Params.url_poster }}" target="_blank">Poster</a>
+        {{ end }}
+        {{ if $item.Params.url_bib }}
+          <a href="{{ $item.Params.url_bib }}" target="_blank">Bib</a>
         {{ end }}
       </div>
       {{ if $item.Params.awards }}

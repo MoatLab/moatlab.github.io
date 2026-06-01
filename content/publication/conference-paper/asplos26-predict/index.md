@@ -39,9 +39,11 @@ featured: true
 # Custom links
 links: []
 
-url_pdf: ''
-url_code: ''
-url_slides: ''
+url_pdf: 'https://huaicheng.github.io/p/asplos26-camp.pdf'
+url_code: 'https://github.com/MoatLab/CAMP'
+url_slides: 'https://huaicheng.github.io/s/asplos26-camp-slides.pdf'
+url_bib: '/bib/asplos26-camp.bib'
+url_poster: 'https://huaicheng.github.io/p/asplos26-camp-poster.pdf'
 
 # Featured image
 image:

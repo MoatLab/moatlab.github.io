@@ -12,7 +12,7 @@ authors:
 
 author_notes: "* Equal contribution"
 
-date: '2026-04-01T00:00:00Z'
+date: '2026-04-02T00:00:00Z'
 doi: ''
 
 # Schedule page publish date (NOT publication's date).
@@ -38,12 +38,17 @@ tags:
 # Display this page in the Featured widget?
 featured: true
 
+# Award badge — rendered as orange pill on the publication list
+award: 'Best Paper Award Honorable Mention'
+
 # Custom links
 links: []
 
-url_pdf: ''
-url_code: ''
-url_slides: ''
+url_pdf: 'https://huaicheng.github.io/p/asplos26-pact.pdf'
+url_code: 'https://github.com/MoatLab/PACT'
+url_slides: 'https://huaicheng.github.io/s/asplos26-pact-slides.pdf'
+url_bib: '/bib/asplos26-pact.bib'
+url_poster: 'https://huaicheng.github.io/p/asplos26-pact-poster.pdf'
 
 # Featured image
 image:

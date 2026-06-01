@@ -55,6 +55,7 @@ links:
 url_pdf: 'https://huaicheng.github.io/p/asplos23-pond.pdf'
 url_code: 'https://github.com/moatlab/Pond'
 url_slides: 'https://huaicheng.github.io/s/asplos23-pond-slides.pdf'
+url_bib: '/bib/asplos23-pond.bib'
 
 # Featured image
 image:

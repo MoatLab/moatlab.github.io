@@ -52,6 +52,11 @@
 /* Enhanced Global Typography */
 html {
   scroll-behavior: smooth;
+  /* `overflow-x: clip` (NOT `hidden`) suppresses horizontal scrollbar without
+     creating a new scroll container, so position:sticky on .page-header keeps
+     working. The band overhang (`calc(-50vw + 50%)` on people sections) is
+     clipped visually but never produces a scrollbar. */
+  overflow-x: clip;
 }
 
 body {
@@ -61,41 +66,58 @@ body {
   color: var(--vt-gray-800);
   font-weight: 400;
   letter-spacing: -0.01em;
+  /* `overflow-x: clip` clips overflow (kills the horizontal scrollbar caused
+     by `calc(-50vw + 50%)` band overhang) WITHOUT creating a new scroll
+     container, so `position: sticky` on .page-header still works. */
+  overflow-x: clip;
 }
 
-/* Global Section Spacing */
+/* Global section spacing — tightened (was --space-6 outer / --space-4 inner). */
 .content > section,
 .main-container > section {
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-2);
   position: relative;
-  padding: var(--space-4) 0;
+  padding: var(--space-2) 0;
 }
 
-/* Section Background Bands */
-section.faculty-section {
-  background: linear-gradient(135deg, rgba(134, 31, 65, 0.02), rgba(229, 117, 31, 0.02));
+/* Section background bands. Vertical padding tightened from --space-4/--space-6
+   (32/48px) to --space-2/--space-3 (16/24px) per "remove unnecessary empty
+   vertical space" feedback. Horizontal padding preserved so the band still
+   bleeds to the viewport edge. */
+section.faculty-section,
+section.students-section,
+section.co-advised-section,
+section.alumni-section {
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
-  padding: var(--space-4) calc(50vw - 50% + var(--space-4)) var(--space-6);
+  padding: var(--space-2) calc(50vw - 50% + var(--space-3)) var(--space-3);
+  margin-bottom: 0;
+}
+section.faculty-section {
+  background: linear-gradient(135deg, rgba(134, 31, 65, 0.02), rgba(229, 117, 31, 0.02));
   border-top: 1px solid rgba(134, 31, 65, 0.1);
   border-bottom: 1px solid rgba(229, 117, 31, 0.1);
 }
-
 section.students-section {
   background: linear-gradient(135deg, rgba(249, 250, 251, 0.8), rgba(243, 244, 246, 0.6));
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
-  padding: var(--space-4) calc(50vw - 50% + var(--space-4)) var(--space-6);
 }
-
 section.co-advised-section {
   background: linear-gradient(135deg, rgba(229, 117, 31, 0.02), rgba(134, 31, 65, 0.02));
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
-  padding: var(--space-4) calc(50vw - 50% + var(--space-4)) var(--space-6);
   border-top: 1px solid rgba(229, 117, 31, 0.1);
   border-bottom: 1px solid rgba(134, 31, 65, 0.1);
 }
+
+/* Headings in the bands: hug the top, breathe a little under */
+section.faculty-section h2,
+section.students-section h2,
+section.co-advised-section h2,
+section.alumni-section h2 {
+  margin-top: var(--space-1);
+  margin-bottom: var(--space-2);
+}
+
+/* The decorative dot divider needs to lose some of its own vertical air */
+.section-divider { margin: 0.35rem auto !important; }
 
 .content > *:first-child,
 .main-container > *:first-child {
@@ -691,7 +713,7 @@ article.publication-page {
   color: #e5751f; /* Virginia Tech orange */
   font-weight: 600;
   font-size: 1.0rem;
-  margin-left: 0;
+  margin: 8px 0 0 0;
   padding-left: 0;
 }
 
@@ -1052,27 +1074,8 @@ article.publication-page {
   position: relative;
 }
 
-.repo-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 3px;
-  height: 0;
-  background: linear-gradient(180deg, var(--vt-maroon), var(--vt-orange));
-  transition: height 0.3s ease;
-  border-radius: 6px 0 0 6px;
-}
-
-.repo-card:hover {
-  border-color: #0969da;
-  transform: translateX(4px);
-  box-shadow: -4px 0 12px rgba(9, 105, 218, 0.1);
-}
-
-.repo-card:hover::before {
-  height: 100%;
-}
+/* Hover effects on .repo-card intentionally removed (no left-edge gradient
+   stripe, no translateX slide, no border-color shift). */
 
 .repo-header {
   margin-bottom: 8px;
@@ -1373,14 +1376,12 @@ article.publication-page {
 .hero-section {
   background: transparent;
   border-radius: 0;
-  margin: 0 0 var(--space-4) 0;
-  padding: var(--space-4) 0;
+  margin: 0 0 0.4rem 0;
+  padding: var(--space-3) 0 0.3rem 0;
   text-align: center;
   position: relative;
-  overflow: hidden;
   box-shadow: none;
   border: none;
-  animation: fadeInUp 0.8s ease-out;
 }
 
 .hero-content {
@@ -1395,30 +1396,27 @@ article.publication-page {
   50% { background-position: 100% 50%; }
 }
 
-.hero-title {
-  font-size: 3.5rem;
-  font-weight: 800;
-  color: var(--vt-gray-900);
-  margin: 0 0 0.5rem 0;
-  letter-spacing: -0.025em;
-  line-height: 1.1;
-  background: linear-gradient(135deg, var(--vt-maroon) 0%, var(--vt-orange) 50%, var(--vt-maroon) 100%);
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: gradientShift 6s ease infinite, fadeInUp 0.8s ease-out;
+.hero-section .hero-title,
+h1.hero-title {
+  font-size: 2.4rem !important;
+  font-weight: 800 !important;
+  color: var(--vt-maroon) !important;
+  margin: 0 0 0.2rem 0 !important;
+  letter-spacing: -0.01em !important;
+  line-height: 1.1 !important;
+  /* No gradient, no animation: solid VT Maroon wordmark. */
 }
+.hero-section .hero-title::after,
+h1.hero-title::after { display: none !important; }
 
-.hero-subtitle {
-  font-size: 1.4rem;
-  font-weight: 500;
-  color: var(--vt-gray-600);
-  margin: 0 0 2rem 0;
-  letter-spacing: 0.025em;
-  text-transform: uppercase;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-  animation: fadeInUp 0.8s ease-out 0.2s both;
+.hero-section .hero-subtitle,
+p.hero-subtitle {
+  font-size: 0.95rem !important;
+  font-weight: 500 !important;
+  color: var(--vt-gray-600) !important;
+  margin: 0 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
 }
 
 .hero-description {
@@ -1607,3 +1605,267 @@ article.publication-page {
     font-size: 0.9rem;
   }
 }
+
+/* =====================================================================
+ * Page-specific styling re-applied after the homepage revert.
+ * These rules ONLY affect /news/, /join/, /publication/, and the footer.
+ * Homepage hero/sections kept exactly as they were (old live design).
+ * ===================================================================== */
+
+/* ---------- Footer (slim, two compact lines) ---------- */
+.moat-footer {
+  margin: 0 auto;
+  padding: 10px 1.5rem;
+  font-family: var(--font-family-primary);
+  color: #75787B;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  max-width: 1100px;
+  text-align: center;
+}
+.moat-footer__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0 6px;
+}
+.moat-footer__funding {
+  margin-top: 6px;
+  font-size: 0.74rem;
+  color: #8a8d90;
+  line-height: 1.45;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.moat-footer__wordmark { font-weight: 700; color: var(--vt-maroon); }
+.moat-footer a {
+  color: #1a1a1a;
+  text-decoration: none;
+  border-bottom: 1px dotted transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.moat-footer__funding a { color: #6c757d; }
+.moat-footer a:hover { color: var(--vt-orange); border-bottom-color: var(--vt-orange); }
+.moat-footer__sep { color: #cbd5e0; }
+
+/* ---------- /news/ — flat compact list ---------- */
+.news-list {
+  max-width: 820px;
+  margin: 0 auto;
+  font-family: var(--font-family-primary);
+  color: #1a1a1a;
+}
+.news-list__title {
+  font-size: 2rem;
+  margin: 4px 0 1rem;
+  font-weight: 800;
+  color: #111827;
+}
+.news-list__title::after { display: none !important; }
+.news-list__items, .news-feed__list {
+  list-style: none !important;
+  padding: 0;
+  margin: 0;
+}
+.news-line {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 14px;
+  padding: 3px 0;
+  align-items: baseline;
+  list-style: none !important;
+}
+.news-line::marker, .news-line::before { content: none !important; }
+.news-line__date {
+  font-family: var(--font-family-mono);
+  font-size: 0.82rem;
+  color: #75787B;
+  white-space: nowrap;
+}
+.news-line__title {
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: #1a1a1a;
+}
+
+/* Homepage news-feed wrapper */
+.news-feed { margin: 2rem auto; padding: 0; max-width: 820px; }
+.news-feed__head { position: relative; margin-bottom: 8px; padding-bottom: 4px; border-bottom: 1px solid #e5e7eb; }
+.news-feed__heading { font-size: 1.4rem; margin: 0; font-weight: 800; color: #111827; }
+.news-feed__heading::after { display: none !important; }
+.news-feed__all { position: absolute; right: 0; bottom: 6px; font-size: 0.82rem; text-decoration: none; color: var(--vt-maroon); }
+.news-feed__all:hover { color: var(--vt-orange); }
+.news-feed__list { list-style: none; padding: 0; margin: 0; }
+.news-feed__item { display: grid; grid-template-columns: 96px 1fr; gap: 14px; padding: 6px 0; align-items: baseline; }
+.news-feed__date { font-family: var(--font-family-mono); font-size: 0.78rem; color: #75787B; }
+.news-feed__title { font-weight: 700; font-size: 0.98rem; color: #1a1a1a !important; text-decoration: none !important; border-bottom: none !important; }
+.news-feed__title:hover { color: var(--vt-maroon) !important; }
+.news-feed__summary { display: block; font-size: 0.88rem; color: #75787B; margin-top: 3px; line-height: 1.5; }
+
+/* ---------- /join/ page ---------- */
+.join-page { max-width: 780px; margin: 0 auto; font-family: var(--font-family-primary); color: #1a1a1a; }
+.join-page__header { margin-bottom: 1.5rem; }
+.join-page__title { font-size: 2.05rem; margin: 4px 0 12px; font-weight: 800; color: #111827; }
+.join-page__title::after { display: none !important; }
+.join-page p, .join-page li { font-size: 1rem; line-height: 1.65; }
+.join-page a { color: var(--vt-maroon); text-decoration: none; border-bottom: 1px dotted var(--vt-maroon); }
+.join-page a:hover { color: var(--vt-orange); border-bottom-color: var(--vt-orange); }
+.join-page h2 { font-size: 1.5rem; margin-top: 2rem; }
+
+/* ---------- /publication/ — very tight per-entry spacing ---------- */
+.publication-entry {
+  margin: 0 0 0.05rem 0 !important;
+  padding: 0 !important;
+}
+.publication-entry + .publication-entry { margin-top: 0 !important; }
+.publication-entry:last-child { margin-bottom: 0 !important; }
+.publications-container > * { margin-bottom: 0.05rem !important; }
+/* Also collapse internal margins inside each entry (title/authors/venue) */
+.publication-entry .publication-title { margin-bottom: 1px !important; line-height: 1.2 !important; }
+.publication-entry .publication-authors { margin-bottom: 1px !important; line-height: 1.25 !important; }
+.publication-entry .publication-venue { margin-bottom: 1px !important; }
+.publication-entry .publication-links { margin-top: 1px !important; }
+.publication-entry .author-notes { margin: 0 !important; line-height: 1.15 !important; }
+
+/* Anchor offset so the sticky nav doesn't cover the section title when jumping
+   to /#faculty, /#graduate-students, etc. (~ navbar height + breathing room) */
+[id="faculty"],
+[id="graduate-students"],
+[id="co-advised--visiting"],
+[id="alumni"],
+section[id] {
+  scroll-margin-top: 90px;
+}
+
+/* Footer: edge-to-edge soft neutral band, sticky to viewport bottom */
+.moat-footer {
+  background: #f3f4f6;
+  padding: 10px 1.5rem;
+  border-top: 1px solid #e5e7eb;
+  max-width: none;
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+  z-index: 50;
+  backdrop-filter: saturate(180%) blur(6px);
+  -webkit-backdrop-filter: saturate(180%) blur(6px);
+  background-color: rgba(243, 244, 246, 0.92);
+}
+/* Need room above the footer so content's last line isn't covered when the page is short */
+body { padding-bottom: 0; }
+.moat-footer__wordmark { color: #861F41; }
+.moat-footer a { color: #1a1a1a; }
+.moat-footer__sep { color: #c0c0c0; }
+
+/* ---------- Vision block (homepage) ----------
+   Centered 850px column, plain background (logo watermark lives on the hero). */
+/* Vision text area widened to 960px without touching other sections.
+   The negative-margin trick escapes the 800px .content cap; horizontal
+   centering is preserved by symmetric L/R offset. */
+.content > section.vision-section,
+section.vision-section {
+  width: 960px;
+  max-width: 960px;
+  margin: 0 calc((800px - 960px) / 2) var(--space-3) !important;
+  padding: 0 var(--space-3) var(--space-3) !important;
+  background: transparent;
+  text-align: justify;
+  hyphens: auto;
+  box-sizing: border-box;
+}
+.content > .hero-section,
+.hero-section {
+  width: 960px;
+  max-width: 960px;
+  margin-left: calc((800px - 960px) / 2);
+  margin-right: calc((800px - 960px) / 2);
+}
+@media (max-width: 960px) {
+  .content > section.vision-section,
+  section.vision-section,
+  .content > .hero-section,
+  .hero-section {
+    width: auto;
+    max-width: 100%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+.vision-lede {
+  font-size: 1.15rem;
+  line-height: 1.55;
+  color: #1a1a1a;
+  margin: 0 0 1.1rem 0;
+  font-weight: 500;
+}
+
+.vision-scope {
+  font-size: 1.0rem;
+  line-height: 1.6;
+  color: #374151;
+  margin: 0 0 1.1rem 0;
+}
+.vision-scope strong { color: var(--vt-maroon); font-weight: 600; }
+
+.vision-thrust-intro {
+  font-size: 0.98rem;
+  color: #374151;
+  margin: 0 0 0.5rem 0;
+  font-weight: 500;
+  text-align: left;
+}
+
+.vision-thrusts {
+  list-style: none;
+  counter-reset: thrust;
+  margin: 0;
+  padding: 0 0 0 1.6rem;
+  color: #1a1a1a;
+  text-align: left;
+}
+.vision-thrusts li {
+  position: relative;
+  margin-bottom: 0.35rem;
+  font-size: 0.96rem;
+  line-height: 1.5;
+}
+.vision-thrusts li::before {
+  counter-increment: thrust;
+  content: counter(thrust) ".";
+  position: absolute;
+  left: -1.4rem;
+  top: 0;
+  font-size: 0.9rem;
+  color: var(--vt-maroon);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.vision-thrusts strong { color: var(--vt-maroon); font-weight: 600; }
+.vision-thrusts a {
+  color: var(--vt-maroon);
+  text-decoration: none;
+  border-bottom: none;
+  font-weight: 500;
+}
+.vision-thrusts a:hover { color: var(--vt-orange); }
+
+
+/* Artifact-evaluation badges on publication entries */
+.publication-badges {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 4px 0 10px 0;
+}
+.publication-badges img {
+  display: block;
+}
+/* When badges are present, give the chip row extra top padding */
+.publication-badges + .publication-links {
+  margin-top: 6px !important;
+  padding-top: 2px;
+}
+

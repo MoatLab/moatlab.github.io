@@ -9,9 +9,25 @@ description: "Computer Systems Research at Virginia Tech"
   <div class="hero-content">
     <h1 class="hero-title">MoatLab</h1>
     <p class="hero-subtitle">Systems Research at Virginia Tech</p>
-    <p class="hero-description">We design and build <strong>high-performance computer systems</strong> that power modern datacenters and cloud platforms. Our work directly addresses critical challenges in memory management, storage optimization, operating systems, and system architecture.</p>
   </div>
 </div>
+
+<section class="vision-section">
+
+<p class="vision-lede">
+We build fast computer systems that bridge <strong>operating systems and computer architecture</strong>. Our work spans memory and storage systems, closing the gap between fast-moving hardware and the software that has to run on it.
+</p>
+
+<p class="vision-thrust-intro">We currently work in four directions:</p>
+
+<ol class="vision-thrusts">
+  <li><strong>Memory tiering and pooling.</strong> Making CXL memory usable at datacenter scale (<a href="https://huaicheng.github.io/p/asplos23-pond.pdf">Pond</a>, <a href="https://huaicheng.github.io/p/osdi25-soaralto.pdf">SoarAlto</a>, <a href="https://huaicheng.github.io/p/asplos26-pact.pdf">PACT</a>).</li>
+  <li><strong>Performance modeling.</strong> We believe in a model-first approach to derive model-driven system designs that are truly performance-centric (<a href="https://huaicheng.github.io/p/asplos25-melody.pdf">Melody</a>, <a href="https://huaicheng.github.io/p/asplos26-camp.pdf">CAMP</a>).</li>
+  <li><strong>Tools.</strong> We build emulators and benchmarks to enable and facilitate cross-layer systems research (<a href="https://huaicheng.github.io/p/fast18-femu.pdf">FEMU</a>, <a href="https://huaicheng.github.io/p/fast26-cylon.pdf">Cylon</a>, <a href="https://huaicheng.github.io/p/fast26-warp.pdf">WARP</a>).</li>
+  <li><strong>Programmability.</strong> Programming models for computational and disaggregated hardware (<a href="https://huaicheng.github.io/p/asplos20-leapio.pdf">LeapIO</a>, <a href="https://huaicheng.github.io/p/sosp21-ioda.pdf">IODA</a>, <a href="https://huaicheng.github.io/p/asplos23-razin.pdf">RAIZN</a>).</li>
+</ol>
+
+</section>
 
 <div class="section-divider"></div>
 
@@ -123,6 +139,17 @@ description: "Computer Systems Research at Virginia Tech"
     </div>
   </div>
 
+  <div class="person-card student vertical">
+    <div class="person-image">
+      <img src="/students/placeholder.svg" alt="Hao Li" loading="lazy">
+    </div>
+    <div class="person-info">
+      <h4 class="person-name">Hao Li</h4>
+      <p class="person-title">MS Student</p>
+      <p class="person-period">08/2025 - Present</p>
+    </div>
+  </div>
+
 </div>
 
 <div class="section-divider"></div>
@@ -191,11 +218,81 @@ description: "Computer Systems Research at Virginia Tech"
 
   <div class="person-card student vertical alumni">
     <div class="person-image">
+      <img src="/students/junliang-hu.jpg" alt="Junliang Hu" loading="lazy">
+    </div>
+    <div class="person-info">
+      <h4 class="person-name"><a href="https://jlhu.io/" target="_blank">Junliang Hu</a></h4>
+      <p class="person-title">Visiting PhD ('25–'26) from CUHK</p>
+    </div>
+  </div>
+
+  <div class="person-card student vertical alumni">
+    <div class="person-image">
       <img src="/students/subhalakshmi-selvanathan.jpg" alt="Subhalakshmi Selvanathan" loading="lazy">
     </div>
     <div class="person-info">
       <h4 class="person-name"><a href="https://www.linkedin.com/in/subhalakshmi-selvanathan/" target="_blank">Subhalakshmi Selvanathan</a></h4>
       <p class="person-title">MS ('24) → Microsoft</p>
+    </div>
+  </div>
+
+  <div class="person-card student vertical alumni">
+    <div class="person-image">
+      <img src="/students/placeholder.svg" alt="Jiuzhi Yu" loading="lazy">
+    </div>
+    <div class="person-info">
+      <h4 class="person-name">Jiuzhi Yu</h4>
+      <p class="person-title">MS ('23) → AWS</p>
+    </div>
+  </div>
+
+  <div class="person-card student vertical alumni">
+    <div class="person-image">
+      <img src="/students/placeholder.svg" alt="Sumanth Rao" loading="lazy">
+    </div>
+    <div class="person-info">
+      <h4 class="person-name">Sumanth Rao</h4>
+      <p class="person-title">MS ('23) → Snowflake</p>
+    </div>
+  </div>
+
+  <div class="person-card student vertical alumni">
+    <div class="person-image">
+      <img src="/students/placeholder.svg" alt="Zhenyu Zhang" loading="lazy">
+    </div>
+    <div class="person-info">
+      <h4 class="person-name">Zhenyu Zhang</h4>
+      <p class="person-title">BS ('26) → Duke PhD</p>
+    </div>
+  </div>
+
+  <div class="person-card student vertical alumni">
+    <div class="person-image">
+      <img src="/students/placeholder.svg" alt="Yi Sun" loading="lazy">
+    </div>
+    <div class="person-info">
+      <h4 class="person-name">Yi Sun</h4>
+      <p class="person-title">BS ('26) → UCSD PhD</p>
+    </div>
+  </div>
+
+  <div class="person-card student vertical alumni">
+    <div class="person-image">
+      <img src="/students/yuanzhuo-yang.jpg" alt="Yuanzhuo Yang" loading="lazy">
+    </div>
+    <div class="person-info">
+      <h4 class="person-name"><a href="https://pages.cs.wisc.edu/~yuanzhuo/" target="_blank">Yuanzhuo Yang</a></h4>
+      <p class="person-title">BS ('24) → UW-Madison PhD</p>
+    </div>
+  </div>
+
+  <div class="person-card student vertical alumni">
+    <div class="person-image">
+      <img src="/students/placeholder.svg" alt="Edward Halim" loading="lazy">
+    </div>
+    <div class="person-info">
+      <h4 class="person-name">Edward Halim</h4>
+      <p class="person-title">BS ('23) → UW-Madison PhD</p>
     </div>
   </div>
 </div>

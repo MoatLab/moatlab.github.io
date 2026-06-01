@@ -33,4 +33,12 @@ Thumbs.db
 
 # Temporary files
 *.tmp
-*.temp CLAUDE.md
+*.temp
+
+# Local working dirs (not part of the deployed site)
+.playwright-mcp/
+relwk/
+.claude/
+static/students/*.tmp.jpg
+static/students/*.oriented.jpg
+CLAUDE.md

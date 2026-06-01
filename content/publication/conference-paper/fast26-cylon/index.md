@@ -43,9 +43,15 @@ featured: true
 # Custom links
 links: []
 
-url_pdf: ''
-url_code: ''
-url_slides: ''
+url_pdf: 'https://huaicheng.github.io/p/fast26-cylon.pdf'
+url_code: 'https://github.com/MoatLab/Cylon'
+url_slides: 'https://huaicheng.github.io/s/fast26-cylon-slides.pdf'
+url_bib: '/bib/fast26-cylon.bib'
+url_poster: 'https://huaicheng.github.io/p/fast26-cylon-poster.pdf'
+
+# Artifact-evaluation badges (USENIX FAST '26 verified)
+artifact_badges: ['available', 'functional', 'reproduced']
+badge_set: 'usenix'
 
 # Featured image
 image:

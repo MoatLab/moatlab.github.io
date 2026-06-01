@@ -16,6 +16,7 @@ image:
 url_pdf: "https://huaicheng.github.io/p/fast18-failslow.pdf"
 url_code: ""
 url_slides: ""
+url_bib: '/bib/fast18-failslow.bib'
 url_video: ""
 url_dataset: ""
 url_poster: ""

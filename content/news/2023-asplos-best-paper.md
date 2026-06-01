@@ -1,19 +1,14 @@
 ---
-title: "ASPLOS 2023 Distinguished Paper Award"
-date: 2023-03-27T00:00:00Z
+title: "ASPLOS '23 Distinguished Paper Award (Pond)"
+date: 2023-03-27
 draft: false
 category: "awards"
 featured: true
-summary: "Pond paper receives Distinguished Paper Award at ASPLOS 2023"
-tags: ["asplos", "awards", "best-paper"]
-authors: []
+summary: "*Pond: CXL-Based Memory Pooling Systems for Cloud Platforms* received the Distinguished Paper Award at ASPLOS '23."
+tags: ["asplos", "best-paper", "cxl"]
 links:
-  - name: "Pond Paper"
+  - name: "Pond paper"
     url: "/publication/conference-paper/asplos23-pond/"
 ---
 
-We are proud to announce that our paper "Pond: CXL-Based Memory Pooling Systems for Cloud Platforms" has received the **Distinguished Paper Award** at ASPLOS 2023!
-
-This recognition highlights the significance of our work on CXL-based memory pooling systems, which enables efficient memory resource sharing across servers in cloud environments. The Pond system demonstrates how emerging CXL technology can be leveraged to build practical memory disaggregation solutions.
-
-Congratulations to all the authors on this outstanding achievement!
+**Pond: CXL-Based Memory Pooling Systems for Cloud Platforms** received the **Distinguished Paper Award** at ASPLOS '23. Pond is foundational to Microsoft Azure's CXL memory infrastructure.

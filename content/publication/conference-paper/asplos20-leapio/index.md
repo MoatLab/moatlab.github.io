@@ -15,6 +15,7 @@ image:
 url_pdf: "https://huaicheng.github.io/p/asplos20-leapio.pdf"
 url_code: "https://github.com/moatlab/LeapIO"
 url_slides: "https://huaicheng.github.io/s/asplos20-leapio-slides.pdf"
+url_bib: '/bib/asplos20-leapio.bib'
 url_video: ""
 url_dataset: ""
 url_poster: ""

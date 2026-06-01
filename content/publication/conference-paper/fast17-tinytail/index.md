@@ -16,6 +16,7 @@ image:
 url_pdf: "https://huaicheng.github.io/p/fast17-ttflash.pdf"
 url_code: "https://github.com/ucare-uchicago/tinyTailFlash"
 url_slides: "https://huaicheng.github.io/s/fast17-ttflash-slides.pdf"
+url_bib: '/bib/fast17-ttflash.bib'
 url_video: ""
 url_dataset: ""
 url_poster: ""
