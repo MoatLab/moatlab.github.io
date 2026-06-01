@@ -6,6 +6,9 @@
     <title>{{ .Site.Title }}</title>
     {{ partial "custom_head.html" . }}
     <style>
+        /* Global box-sizing reset so percentage widths + padding don't overflow the viewport */
+        *, *::before, *::after { box-sizing: border-box; }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
@@ -14,6 +17,11 @@
             background-color: #f8f9fa;
             min-height: 100vh;
         }
+        /* Keep horizontal-overflow clipping on the html element so it doesn't break position:sticky
+           on descendants (overflow-x:hidden on body would create a new block formatting context
+           and de-stick the sticky navbar + footer). overflow-x:clip is safer when supported;
+           html-level clip on older browsers still permits sticky to work. */
+        html { overflow-x: clip; }
         
         .page-header {
             background-color: white;
@@ -66,6 +74,13 @@
             padding: 2rem;
             background-color: white;
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            box-sizing: border-box;
+        }
+        @media (max-width: 768px) {
+            .main-container {
+                max-width: 100%;
+                padding: 1rem;
+            }
         }
         
         /* Special width for project pages */
@@ -487,8 +502,9 @@
             .people-section {
                 padding: 0 2px;
             }
-            
+
             .people-grid.vertical {
+                grid-template-columns: repeat(2, 1fr);
                 gap: 12px;
             }
 

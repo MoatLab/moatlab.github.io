@@ -1,8 +1,11 @@
 {{ define "main" }}
   <div class="publications-container publication-page">
+    {{ with .Content }}
+      <div class="publications-intro">{{ . }}</div>
+    {{ end }}
     {{ $sorted := .Pages.ByDate.Reverse }}
     {{ range $index, $item := $sorted }}
       {{ partial "views/citation.html" (dict "item" $item "index" $index) }}
     {{ end }}
   </div>
-{{ end }} 
+{{ end }}

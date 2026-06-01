@@ -479,6 +479,19 @@ section.alumni-section h2 {
   margin-bottom: 0 !important;
 }
 
+/* Publications page lead-in paragraph */
+.publications-intro {
+  margin: 0 0 1.5rem !important;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid #e5e7eb;
+  color: #4a4a4a;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  max-width: 50em;
+}
+.publications-intro p:first-child { margin-top: 0; }
+.publications-intro p:last-child { margin-bottom: 0; }
+
 /* Remove spacing from any div elements that might be causing gaps */
 .publication-entry div {
   margin-bottom: 0 !important;
@@ -1622,6 +1635,7 @@ p.hero-subtitle {
   line-height: 1.5;
   max-width: 1100px;
   text-align: center;
+  box-sizing: border-box;
 }
 .moat-footer__row {
   display: flex;
@@ -1746,6 +1760,7 @@ section[id] {
   border-top: 1px solid #e5e7eb;
   max-width: none;
   width: 100%;
+  box-sizing: border-box;
   position: sticky;
   bottom: 0;
   z-index: 50;
