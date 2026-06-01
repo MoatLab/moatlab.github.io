@@ -43,6 +43,7 @@ links:
 url_pdf: 'https://huaicheng.github.io/p/osdi25-soaralto.pdf'
 url_code: 'https://github.com/moatlab/SoarAlto'
 url_slides: 'https://huaicheng.github.io/s/osdi25-soaralto-slides.pdf'
+url_poster: 'https://huaicheng.github.io/p/osdi25-soaralto-poster.pdf'
 url_bib: '/bib/osdi25-soaralto.bib'
 
 # Featured image

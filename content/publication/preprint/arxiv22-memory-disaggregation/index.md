@@ -13,6 +13,7 @@ image:
   focal_point: ""
   preview_only: false
 url_pdf: "https://arxiv.org/pdf/2203.00241.pdf"
+url_bib: "/bib/arxiv22-pond.bib"
 url_code: ""
 url_slides: ""
 url_video: ""

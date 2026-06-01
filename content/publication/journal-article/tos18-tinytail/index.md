@@ -14,6 +14,7 @@ image:
   focal_point: ""
   preview_only: false
 url_pdf: "https://huaicheng.github.io/p/tos17-ttflash.pdf"
+url_bib: "/bib/tos17-ttflash.bib"
 url_code: ""
 url_slides: ""
 url_video: ""

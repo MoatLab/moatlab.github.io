@@ -47,6 +47,7 @@ links:
   url: https://ieeexplore.ieee.org/document/10034802
 
 url_pdf: 'https://ieeexplore.ieee.org/document/10034802'
+url_bib: '/bib/ieeemicro23-pond.bib'
 
 
 

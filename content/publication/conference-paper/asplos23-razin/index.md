@@ -46,7 +46,12 @@ links:
   url: https://huaicheng.github.io/p/asplos23-razin.pdf
 
 url_pdf: 'https://huaicheng.github.io/p/asplos23-razin.pdf'
+url_code: 'https://github.com/ZonedStorage/RAIZN-release'
 url_bib: '/bib/asplos23-razin.bib'
+
+# Artifact-evaluation badges (ACM ASPLOS '23 verified)
+artifact_badges: ['available', 'functional']
+badge_set: 'acm'
 
 # Featured image
 image:

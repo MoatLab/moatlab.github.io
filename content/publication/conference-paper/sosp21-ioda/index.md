@@ -52,6 +52,10 @@ url_code: 'https://github.com/MoatLab/IODA-SOSP21-AE'
 url_slides: 'https://huaicheng.github.io/s/sosp21-ioda-slides.pdf'
 url_bib: '/bib/sosp21-ioda.bib'
 
+# Artifact-evaluation badges (ACM SOSP '21 verified)
+artifact_badges: ['available', 'functional', 'reproduced']
+badge_set: 'acm'
+
 # Featured image
 image:
   caption: ""

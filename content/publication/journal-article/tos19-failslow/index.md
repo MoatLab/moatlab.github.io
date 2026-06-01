@@ -14,6 +14,7 @@ image:
   focal_point: ""
   preview_only: false
 url_pdf: "https://huaicheng.github.io/p/tos18-failslow.pdf"
+url_bib: "/bib/tos18-failslow.bib"
 url_code: ""
 url_slides: ""
 url_video: ""

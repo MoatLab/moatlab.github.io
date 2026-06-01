@@ -47,6 +47,7 @@ links:
   url: https://arxiv.org/abs/2410.00328
 
 url_pdf: 'https://arxiv.org/pdf/2410.00328'
+url_bib: '/bib/arxiv24-tuna.bib'
 
 # Featured image
 image:

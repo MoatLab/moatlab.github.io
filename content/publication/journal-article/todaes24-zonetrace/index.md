@@ -44,6 +44,7 @@ links:
   url: https://dl.acm.org/doi/10.1145/3656172
 
 url_pdf: 'https://dl.acm.org/doi/10.1145/3656172'
+url_bib: '/bib/todaes24-zonetrace.bib'
 
 
 

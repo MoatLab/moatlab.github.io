@@ -47,6 +47,7 @@ links:
 url_pdf: 'https://huaicheng.github.io/p/asplos25-melody.pdf'
 url_code: 'https://github.com/moatlab/Melody'
 url_slides: 'https://huaicheng.github.io/s/asplos25-melody-slides.pdf'
+url_poster: 'https://huaicheng.github.io/p/asplos25-melody-poster.pdf'
 url_bib: '/bib/asplos25-melody.bib'
 
 # Featured image

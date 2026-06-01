@@ -13,6 +13,7 @@ image:
   focal_point: ""
   preview_only: false
 url_pdf: ""
+url_bib: "/bib/nvmw23-pond.bib"
 url_code: ""
 url_slides: ""
 url_video: ""
