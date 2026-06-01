@@ -18,13 +18,13 @@ description: "Computer Systems Research at Virginia Tech"
 We build fast computer systems that bridge <strong>operating systems and computer architecture</strong>. Our work spans memory and storage systems, closing the gap between fast-moving hardware and the software that has to run on it.
 </p>
 
-<p class="vision-thrust-intro">We currently work in four directions:</p>
+<p class="vision-thrust-intro">We currently work in four directions to advance systems support for emerging hardware and data-intensive workloads:</p>
 
 <ol class="vision-thrusts">
-  <li><strong>Memory tiering and pooling.</strong> Making CXL memory usable at datacenter scale (<a href="https://huaicheng.github.io/p/asplos23-pond.pdf">Pond</a>, <a href="https://huaicheng.github.io/p/osdi25-soaralto.pdf">SoarAlto</a>, <a href="https://huaicheng.github.io/p/asplos26-pact.pdf">PACT</a>).</li>
-  <li><strong>Performance modeling.</strong> We believe in a model-first approach to derive model-driven system designs that are truly performance-centric (<a href="https://huaicheng.github.io/p/asplos25-melody.pdf">Melody</a>, <a href="https://huaicheng.github.io/p/asplos26-camp.pdf">CAMP</a>).</li>
-  <li><strong>Tools.</strong> We build emulators and benchmarks to enable and facilitate cross-layer systems research (<a href="https://huaicheng.github.io/p/fast18-femu.pdf">FEMU</a>, <a href="https://huaicheng.github.io/p/fast26-cylon.pdf">Cylon</a>, <a href="https://huaicheng.github.io/p/fast26-warp.pdf">WARP</a>).</li>
-  <li><strong>Programmability.</strong> Programming models for computational and disaggregated hardware (<a href="https://huaicheng.github.io/p/asplos20-leapio.pdf">LeapIO</a>, <a href="https://huaicheng.github.io/p/sosp21-ioda.pdf">IODA</a>, <a href="https://huaicheng.github.io/p/asplos23-razin.pdf">RAIZN</a>).</li>
+  <li><strong>Memory tiering and pooling.</strong> Treating memory-access criticality as a first-class design axis, we make CXL memory usable at datacenter scale (<a href="https://huaicheng.github.io/p/asplos23-pond.pdf">Pond</a>, <a href="https://huaicheng.github.io/p/osdi25-soaralto.pdf">SoarAlto</a>, <a href="https://huaicheng.github.io/p/asplos26-pact.pdf">PACT</a>).</li>
+  <li><strong>Performance modeling.</strong> Deriving heterogeneous-memory behavior from first principles, we make performance a design-time property rather than a deployment surprise (<a href="https://huaicheng.github.io/p/asplos25-melody.pdf">Melody</a>, <a href="https://huaicheng.github.io/p/asplos26-camp.pdf">CAMP</a>).</li>
+  <li><strong>Tools.</strong> Building emulators, profiling frameworks, and benchmarks as research primitives, we empower the broader systems community to ask new questions across the stack (<a href="https://huaicheng.github.io/p/fast18-femu.pdf">FEMU</a>, <a href="https://huaicheng.github.io/p/fast26-cylon.pdf">Cylon</a>, <a href="https://huaicheng.github.io/p/fast26-warp.pdf">WARP</a>).</li>
+  <li><strong>Programmability.</strong> Co-designing the OS-hardware interface, we build programming models for computational and disaggregated hardware (<a href="https://huaicheng.github.io/p/asplos20-leapio.pdf">LeapIO</a>, <a href="https://huaicheng.github.io/p/sosp21-ioda.pdf">IODA</a>, <a href="https://huaicheng.github.io/p/asplos23-razin.pdf">RAIZN</a>).</li>
 </ol>
 
 </section>
