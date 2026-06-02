@@ -71,21 +71,6 @@
             color: #1a1a1a;
         }
 
-        /* Skip-to-main link: visible only when focused (keyboard a11y) */
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 0;
-            background: #1a1a1a;
-            color: #fff;
-            padding: 8px 12px;
-            text-decoration: none;
-            font-weight: 600;
-            z-index: 100;
-            border-radius: 0 0 4px 0;
-        }
-        .skip-link:focus { top: 0; }
-
         /* Hamburger toggle: hidden on desktop, used on mobile via :checked */
         .nav-toggle, .nav-toggle-label { display: none; }
 
@@ -559,11 +544,10 @@
     <link rel="alternate" type="application/rss+xml" title="MoatLab" href="/index.xml">
 </head>
 <body>
-    <a class="skip-link" href="#main">Skip to main content</a>
     <div class="page-header">
         <nav class="navbar" aria-label="Site">
             <a href="/" class="navbar-brand">
-                <img src="/moatlab-pics/moatlab-logo-120.png" alt="" width="30" height="30" style="margin-right: 8px;" fetchpriority="high">
+                <img src="/moatlab-pics/moatlab-logo-120.png" alt="" width="32" height="30" style="margin-right: 8px;" fetchpriority="high">
                 MoatLab
             </a>
             <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">

@@ -732,6 +732,12 @@ article.publication-page {
   margin: 8px 0 0 0;
   padding-left: 0;
 }
+.publication-award--best::before,
+.publication-award--honor::before {
+  content: '\1F3C6';   /* 🏆 trophy */
+  margin-right: 0.4em;
+  font-size: 1.05em;
+}
 
 /* Responsive design */
 @media (max-width: 1200px) {

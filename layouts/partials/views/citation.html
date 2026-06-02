@@ -96,12 +96,17 @@
           <a href="{{ $item.Params.url_bib }}" target="_blank">Bib</a>
         {{ end }}
       </div>
-      {{ if $item.Params.awards }}
-        {{ range $item.Params.awards }}
-          <div class="publication-award">{{ . }}</div>
+      {{ $awardList := $item.Params.awards }}
+      {{ if not $awardList }}{{ if $item.Params.award }}{{ $awardList = slice $item.Params.award }}{{ end }}{{ end }}
+      {{ range $awardList }}
+        {{ $tier := "" }}
+        {{ $lc := lower . }}
+        {{ if or (in $lc "honorable mention") (in $lc "nominee") (in $lc "runner") }}
+          {{ $tier = "honor" }}
+        {{ else if or (in $lc "best paper") (in $lc "distinguished paper") (in $lc "outstanding paper") }}
+          {{ $tier = "best" }}
         {{ end }}
-      {{ else if $item.Params.award }}
-        <div class="publication-award">{{ $item.Params.award }}</div>
+        <div class="publication-award{{ with $tier }} publication-award--{{ . }}{{ end }}">{{ . }}</div>
       {{ end }}
     </div>
   </div>

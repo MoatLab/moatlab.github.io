@@ -7,7 +7,13 @@
       {{ if $item.Date }} · {{ $item.Date.Format "Jan 2006" }}{{ end }}
     </p>
     <h1 class="pub-detail__title">{{ $item.Title }}</h1>
-    {{ with $item.Params.award }}<p class="pub-detail__award">{{ . }}</p>{{ end }}
+    {{ with $item.Params.award }}
+      {{ $lc := lower . }}
+      {{ $tier := "" }}
+      {{ if or (in $lc "honorable mention") (in $lc "nominee") (in $lc "runner") }}{{ $tier = "honor" }}
+      {{ else if or (in $lc "best paper") (in $lc "distinguished paper") (in $lc "outstanding paper") }}{{ $tier = "best" }}{{ end }}
+      <p class="pub-detail__award{{ with $tier }} publication-award--{{ . }}{{ end }}">{{ . }}</p>
+    {{ end }}
 
     {{ with $item.Params.authors }}
     <p class="pub-detail__authors">
