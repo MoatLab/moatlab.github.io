@@ -1,18 +1,64 @@
 {{ define "main" }}
-<div style="max-width: 600px; margin: 100px auto; text-align: center; padding: 2rem;">
-  <h1 style="font-size: 2rem; color: #1f2937; margin-bottom: 1rem;">{{ .Title }}</h1>
-  
-  <p style="color: #6b7280; margin-bottom: 2rem;">Redirecting to publications list...</p>
-  
-  <a href="/publication/" style="display: inline-block; padding: 0.75rem 1.5rem; background: #861F41; color: white; border-radius: 8px; text-decoration: none; font-weight: 600;">
-    View All Publications
-  </a>
-  
-  <script>
-    // Auto-redirect after 2 seconds
-    setTimeout(function() {
-      window.location.href = '/publication/';
-    }, 2000);
-  </script>
-</div>
+{{ $item := . }}
+<article class="publication-page publication-detail">
+  <header class="pub-detail__header">
+    <p class="pub-detail__eyebrow">
+      {{ with $item.Params.publication_short }}{{ . | markdownify }}{{ else }}{{ with $item.Params.publication }}{{ . | markdownify }}{{ end }}{{ end }}
+      {{ if $item.Date }} · {{ $item.Date.Format "Jan 2006" }}{{ end }}
+    </p>
+    <h1 class="pub-detail__title">{{ $item.Title }}</h1>
+    {{ with $item.Params.award }}<p class="pub-detail__award">{{ . }}</p>{{ end }}
+
+    {{ with $item.Params.authors }}
+    <p class="pub-detail__authors">
+      {{ $authors := . }}
+      {{ $len := len $authors }}
+      {{ range $i, $a := $authors }}
+        {{ $page := $.Site.GetPage (printf "/authors/%s" $a) }}
+        {{ if $page }}{{ $page.Title }}{{ else }}{{ $a }}{{ end }}{{ if ne (add $i 1) $len }}, {{ end }}
+      {{ end }}
+    </p>
+    {{ end }}
+
+    {{ with $item.Params.author_notes }}<p class="pub-detail__author-notes">{{ . | markdownify }}</p>{{ end }}
+
+    {{ with $item.Params.publication }}<p class="pub-detail__venue">{{ . | markdownify }}</p>{{ end }}
+  </header>
+
+  {{ with $item.Params.artifact_badges }}
+  {{ $set := $item.Params.badge_set | default "acm" }}
+  {{ $linkUrl := cond (eq $set "usenix") "https://secartifacts.github.io/usenixfast2026/" "https://www.acm.org/publications/policies/artifact-review-and-badging-current" }}
+  <div class="pub-detail__badges">
+    {{ range . }}
+      {{ $src := cond (eq $set "usenix") (printf "/img/usenix_%s.svg" .) (printf "/img/acm_%s_1.1.png" .) }}
+      <a href="{{ $linkUrl }}" rel="noopener" title="Artifact {{ . | title }}"><img src="{{ $src }}" alt="Artifact {{ . | title }} badge" width="60"></a>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  <nav class="pub-detail__links" aria-label="Paper resources">
+    {{ with $item.Params.url_pdf }}<a href="{{ . }}" rel="noopener">PDF</a>{{ end }}
+    {{ with $item.Params.url_code }}<a href="{{ . }}" rel="noopener">Code</a>{{ end }}
+    {{ with $item.Params.url_slides }}<a href="{{ . }}" rel="noopener">Slides</a>{{ end }}
+    {{ with $item.Params.url_poster }}<a href="{{ . }}" rel="noopener">Poster</a>{{ end }}
+    {{ with $item.Params.url_video }}<a href="{{ . }}" rel="noopener">Video</a>{{ end }}
+    {{ with $item.Params.url_bib }}<a href="{{ . }}" rel="noopener">BibTeX</a>{{ end }}
+    {{ with $item.Params.doi }}<a href="https://doi.org/{{ . }}" rel="noopener">DOI</a>{{ end }}
+  </nav>
+
+  {{ with $item.Params.abstract }}
+  <section class="pub-detail__abstract">
+    <h2>Abstract</h2>
+    <p>{{ . | markdownify }}</p>
+  </section>
+  {{ end }}
+
+  {{ with $item.Content }}
+  <section class="pub-detail__notes">
+    {{ . }}
+  </section>
+  {{ end }}
+
+  <p class="pub-detail__back"><a href="/publication/">&larr; All publications</a></p>
+</article>
 {{ end }}

@@ -1890,6 +1890,115 @@ section.vision-section {
 }
 
 /* ============================================================
+   Per-paper detail page (layouts/publication/single.html)
+   ============================================================ */
+.publication-detail {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 1rem 0 3rem;
+}
+.pub-detail__header { margin-bottom: 1.5rem; }
+.pub-detail__eyebrow {
+  font-size: 0.85rem;
+  color: var(--vt-maroon);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin: 0 0 0.5rem;
+}
+.pub-detail__title {
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+  color: #1a1a1a;
+}
+.pub-detail__award {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--vt-orange);
+  border: 1px solid var(--vt-orange);
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin: 0 0 0.75rem;
+}
+.pub-detail__authors {
+  font-size: 1rem;
+  color: #374151;
+  margin: 0 0 0.5rem;
+  line-height: 1.5;
+}
+.pub-detail__author-notes {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #6b7280;
+  margin: 0 0 0.5rem;
+}
+.pub-detail__venue {
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin: 0;
+}
+.pub-detail__badges {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin: 0.75rem 0 1rem;
+}
+.pub-detail__badges img { height: 44px; width: auto; }
+.pub-detail__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 1.5rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+}
+.pub-detail__links a {
+  color: #1a3d8f;
+  background: #eef3fb;
+  border: 1px solid #c3d4ee;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.15s, background-color 0.15s, border-color 0.15s;
+}
+.pub-detail__links a:hover {
+  color: #102966;
+  background: #d8e3f5;
+  border-color: #1a3d8f;
+}
+.pub-detail__abstract h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  color: #1a1a1a;
+}
+.pub-detail__abstract p {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #1f2937;
+  margin: 0 0 1.5rem;
+  text-align: justify;
+  hyphens: auto;
+}
+.pub-detail__notes { margin: 1.5rem 0; }
+.pub-detail__back {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+  font-size: 0.9rem;
+}
+.pub-detail__back a {
+  color: var(--vt-maroon);
+  text-decoration: none;
+}
+.pub-detail__back a:hover { text-decoration: underline; }
+
+/* ============================================================
    Accessibility baseline — added 2026-06 from site-review-merged-2026-06.md
    ============================================================ */
 
