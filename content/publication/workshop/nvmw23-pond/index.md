@@ -3,7 +3,7 @@ title: "Pond: The Case of CXL Memory Pooling for Cloud Datacenters"
 number: 99
 authors: ["Huaicheng Li", "Daniel S. Berger", "Lisa Hsu", "Daniel Ernst", "Pantea Zardoshti", "Stanko Novakovic", "Monish Shah", "Samir Rajadnya", "Scott Lee", "Ishwar Agarwal", "Mark D. Hill", "Marcus Fontoura", "Ricardo Bianchini"]
 date: 2023-03-01
-publication_types: ["1"]
+publication_types: ['paper-conference']
 publication: "In the 14th Annual Non-Volatile Memories Workshop (NVMW)"
 publication_short: "In *NVMW '23*"
 abstract: ""

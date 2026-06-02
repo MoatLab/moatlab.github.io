@@ -81,19 +81,19 @@
       {{ end }}
       <div class="publication-links">
         {{ if $item.Params.url_pdf }}
-          <a href="{{ $item.Params.url_pdf }}" target="_blank">PDF</a>
+          <a href="{{ $item.Params.url_pdf }}" target="_blank" rel="noopener">PDF</a>
         {{ end }}
         {{ if $item.Params.url_code }}
-          <a href="{{ $item.Params.url_code }}" target="_blank">Code</a>
+          <a href="{{ $item.Params.url_code }}" target="_blank" rel="noopener">Code</a>
         {{ end }}
         {{ if $item.Params.url_slides }}
-          <a href="{{ $item.Params.url_slides }}" target="_blank">Slides</a>
+          <a href="{{ $item.Params.url_slides }}" target="_blank" rel="noopener">Slides</a>
         {{ end }}
         {{ if $item.Params.url_poster }}
-          <a href="{{ $item.Params.url_poster }}" target="_blank">Poster</a>
+          <a href="{{ $item.Params.url_poster }}" target="_blank" rel="noopener">Poster</a>
         {{ end }}
         {{ if $item.Params.url_bib }}
-          <a href="{{ $item.Params.url_bib }}" target="_blank">Bib</a>
+          <a href="{{ $item.Params.url_bib }}" target="_blank" rel="noopener">Bib</a>
         {{ end }}
       </div>
       {{ $awardList := $item.Params.awards }}

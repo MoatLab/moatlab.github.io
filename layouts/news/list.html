@@ -4,7 +4,7 @@
   <ul class="news-list__items">
     {{ range (where .Site.RegularPages "Section" "news").ByDate.Reverse }}
       <li class="news-line">
-        <span class="news-line__date">{{ .Date.Format "01/2006" }}</span>
+        <time class="news-line__date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "01/2006" }}</time>
         <span class="news-line__title">{{ .Title }}</span>
       </li>
     {{ end }}

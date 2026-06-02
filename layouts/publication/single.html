@@ -26,7 +26,7 @@
     </p>
     {{ end }}
 
-    {{ with $item.Params.author_notes }}<p class="pub-detail__author-notes">{{ . | markdownify }}</p>{{ end }}
+    {{ with $item.Params.author_notes }}<div class="pub-detail__author-notes">{{ . | markdownify }}</div>{{ end }}
 
     {{ with $item.Params.publication }}<p class="pub-detail__venue">{{ . | markdownify }}</p>{{ end }}
   </header>

@@ -3,7 +3,7 @@ title: "MittOS: Supporting Millisecond Tail Tolerance with Fast Rejecting SLO-aw
 number: 99
 authors: ["Mingzhe Hao", "Huaicheng Li", "Michael Hao Tong", "Chrisma Pakha", "Riza O. Suminto", "Cesar A. Stuardo", "Andrew A. Chien", "Haryadi S. Gunawi"]
 date: 2017-10-01
-publication_types: ["1"]
+publication_types: ['paper-conference']
 publication: "In 26th ACM Symposium on Operating Systems Principles (SOSP)"
 publication_short: "In *SOSP '17*"
 abstract: ""

@@ -293,7 +293,7 @@ We believe open-source artifacts are how systems research compounds, even more s
 }
 
 .repo-stats span {
-    transition: all 0.3s ease;
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 </style>
 

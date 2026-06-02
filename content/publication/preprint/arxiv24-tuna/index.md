@@ -22,7 +22,7 @@ doi: '10.48550/arXiv.2410.00328'
 publishDate: '2024-10-01T00:00:00Z'
 
 # Publication type.
-publication_types: ['article']
+publication_types: ['manuscript']
 
 # Publication name and optional abbreviated publication name.
 publication: '*arXiv preprint arXiv:2410.00328*'

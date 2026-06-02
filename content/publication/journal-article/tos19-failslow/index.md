@@ -3,7 +3,7 @@ title: "Fail-Slow at Scale: Evidence of Hardware Performance Faults in Large Pro
 number: 99
 authors: ["Haryadi S. Gunawi", "Riza O. Suminto", "Russell Sears", "Casey Golliher", "Swaminathan Sundararaman", "Xing Lin", "Tim Emami", "Weiguang Sheng", "Nematollah Bidokhti", "Caitie McCaffrey", "Deepthi Srinivasan", "Biswaranjan Panda", "Andrew Baptist", "Gary Grider", "Parks M. Fields", "Kevin Harms", "Robert B. Ross", "Andree Jacobson", "Robert Ricci", "Kirk Webb", "Peter Alvaro", "H. Birali Runesha", "Mingzhe Hao", "Huaicheng Li"]
 date: 2018-03-01
-publication_types: ["2"]
+publication_types: ['article-journal']
 publication: "ACM Transactions on Storage"
 publication_short: "ACM TOS (Extended version of FAST '18)"
 award: "Fast-Tracked"

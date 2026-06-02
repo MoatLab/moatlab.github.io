@@ -9,7 +9,7 @@ doi: ''
 publishDate: '2024-12-01T00:00:00Z'
 
 # Publication type.
-publication_types: ['article']
+publication_types: ['manuscript']
 
 # Publication name and optional abbreviated publication name.
 publication: '*arXiv preprint arXiv:2409.14317*'

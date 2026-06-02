@@ -3,7 +3,7 @@ title: "Tiny-Tail Flash: Near-Perfect Elimination of Garbage Collection Tail Lat
 number: 99
 authors: ["Shiqin Yan", "Huaicheng Li", "Mingzhe Hao", "Michael Hao Tong", "Swaminatahan Sundararaman", "Andrew A. Chien", "Haryadi S. Gunawi"]
 date: 2017-06-01
-publication_types: ["2"]
+publication_types: ['article-journal']
 publication: "ACM Transactions on Storage"
 publication_short: "ACM TOS (Extended version of FAST '17)"
 award: "Fast-Tracked"

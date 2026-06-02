@@ -3,9 +3,11 @@
      Per-page title/description fall back to the site defaults. */}}
 {{- $site_title := "MoatLab @ Virginia Tech" -}}
 {{- $site_desc := site.Params.marketing.seo.description | default "MoatLab research group at Virginia Tech: memory, OS, architecture, and storage systems." -}}
-{{- $title := cond .IsHome $site_title (printf "%s · MoatLab" .Title) -}}
+{{- $page_title := .Title -}}
+{{- if not $page_title -}}{{- $page_title = (.Section | humanize) -}}{{- end -}}
+{{- $title := cond .IsHome $site_title (printf "%s · MoatLab" $page_title) -}}
 {{- $desc := cond (or (eq .Kind "home") (not .Description)) $site_desc .Description -}}
-{{- $img := absURL "moatlab-pics/moatlab-logo.png" -}}
+{{- $img := absURL "moatlab-pics/moatlab-logo-og.png" -}}
 {{- $url := absURL .RelPermalink -}}
 <meta name="description" content="{{ $desc }}">
 <meta property="og:type" content="{{ cond .IsPage "article" "website" }}">

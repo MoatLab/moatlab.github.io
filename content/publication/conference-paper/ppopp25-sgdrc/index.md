@@ -25,7 +25,7 @@ publishDate: '2025-01-01T00:00:00Z'
 publication_types: ['paper-conference']
 
 # Publication name and optional abbreviated publication name.
-publication: In *Proceedings of the 29th ACM SIGPLAN Annual Symposium on Principles and Practice of Parallel Programming (PPoPP)*
+publication: In *Proceedings of the 30th ACM SIGPLAN Annual Symposium on Principles and Practice of Parallel Programming (PPoPP)*
 publication_short: In *PPoPP '25*
 
 abstract: 'This paper presents SGDRC, a software-defined dynamic resource control system for concurrent DNN inference on NVIDIA GPUs.'
@@ -62,6 +62,6 @@ projects: []
 slides: ""
 ---
 
-**Conference:** PPoPP'25 (29th ACM SIGPLAN Annual Symposium on Principles and Practice of Parallel Programming)
+**Conference:** PPoPP'25 (30th ACM SIGPLAN Annual Symposium on Principles and Practice of Parallel Programming)
 
 This paper presents SGDRC, a software-defined dynamic resource control system for concurrent DNN inference on NVIDIA GPUs. 

@@ -3,7 +3,7 @@ title: "Missile: Fine-Grained, Hardware-Level GPU Resource Isolation for Multi-T
 number: 2
 authors: ["Yongkang Zhang", "Haoxuan Yu", "Chenxia Han", "Cheng Wang", "Baotong Lu", "Yunzhe Li", "Zhifeng Jiang", "Yang Li", "Xiaowen Chu", "Huaicheng Li"]
 date: 2024-07-01
-publication_types: ["3"]
+publication_types: ['manuscript']
 publication: "arXiv preprint arXiv:2407.13996"
 publication_short: "arXiv:2407.13996"
 abstract: ""

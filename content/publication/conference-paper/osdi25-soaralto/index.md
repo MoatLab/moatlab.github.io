@@ -19,7 +19,7 @@ publishDate: '2025-01-01T00:00:00Z'
 publication_types: ['paper-conference']
 
 # Publication name and optional abbreviated publication name.
-publication: In *Proceedings of the 17th USENIX Symposium on Operating Systems Design and Implementation (OSDI)*
+publication: In *Proceedings of the 19th USENIX Symposium on Operating Systems Design and Implementation (OSDI)*
 publication_short: In *OSDI '25*
 
 abstract: 'This paper presents novel approaches to tiered memory management that go beyond traditional hotness-based policies.'
@@ -59,6 +59,6 @@ projects: []
 slides: ""
 ---
 
-**Conference:** OSDI'25 (17th USENIX Symposium on Operating Systems Design and Implementation)
+**Conference:** OSDI'25 (19th USENIX Symposium on Operating Systems Design and Implementation)
 
 This paper presents novel approaches to tiered memory management that go beyond traditional hotness-based policies. 

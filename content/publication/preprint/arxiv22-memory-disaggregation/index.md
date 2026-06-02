@@ -3,7 +3,7 @@ title: "First-generation memory disaggregation for cloud platforms"
 number: 99
 authors: ["Huaicheng Li", "Daniel S. Berger", "Stanko Novakovic", "Lisa Hsu", "Daniel Ernst", "Pantea Zardoshti", "Monish Shah", "Samir Rajadnya", "Scott Lee", "Ishwar Agarwal", "Mark D. Hill", "Marcus Fontoura", "Ricardo Bianchini"]
 date: 2022-03-01
-publication_types: ["3"]
+publication_types: ['manuscript']
 publication: "arXiv preprint arXiv:2203.00241"
 publication_short: "arXiv:2203.00241"
 abstract: ""

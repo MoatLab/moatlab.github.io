@@ -3,7 +3,7 @@ title: "Evolving Storage Stack for Predictability and Efficiency"
 number: 99
 authors: ["Huaicheng Li"]
 date: 2020-06-01
-publication_types: ["7"]
+publication_types: ['thesis']
 publication: "PhD Dissertation, University of Chicago"
 publication_short: "PhD Thesis, UChicago"
 abstract: ""

@@ -23,7 +23,7 @@ publishDate: '2025-01-01T00:00:00Z'
 publication_types: ['paper-conference']
 
 # Publication name and optional abbreviated publication name.
-publication: In *Proceedings of the 29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS)*
+publication: In *Proceedings of the 30th ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS)*
 publication_short: In *ASPLOS '25*
 
 abstract: 'This paper presents a systematic characterization and performance analysis of CXL memory at scale.'
@@ -63,6 +63,6 @@ projects: []
 slides: ""
 ---
 
-**Conference:** ASPLOS'25 (29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems)
+**Conference:** ASPLOS'25 (30th ACM International Conference on Architectural Support for Programming Languages and Operating Systems)
 
 This paper presents a systematic characterization and performance analysis of CXL memory at scale. 

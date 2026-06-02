@@ -20,7 +20,7 @@ publishDate: '2025-12-01T00:00:00Z'
 publication_types: ['paper-conference']
 
 # Publication name and optional abbreviated publication name.
-publication: In *Proceedings of the 30th ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS)*
+publication: In *Proceedings of the 31st ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS)*
 publication_short: In *ASPLOS '26*
 
 abstract: ''
@@ -58,6 +58,6 @@ projects: []
 slides: ""
 ---
 
-**Conference:** ASPLOS'26 (30th ACM International Conference on Architectural Support for Programming Languages and Operating Systems)
+**Conference:** ASPLOS'26 (31st ACM International Conference on Architectural Support for Programming Languages and Operating Systems)
 
 *To Appear*
