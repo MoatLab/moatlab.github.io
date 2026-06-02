@@ -82,6 +82,9 @@
             background-color: white;
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
             box-sizing: border-box;
+            /* Fill the viewport so short pages don't show a stripe of body bg above the footer.
+               86px = ~44px navbar + ~42px sticky footer */
+            min-height: calc(100vh - 86px);
         }
         @media (max-width: 768px) {
             .main-container {

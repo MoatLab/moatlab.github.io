@@ -1370,8 +1370,10 @@ p.hero-subtitle {
   max-width: none;
   width: 100%;
   box-sizing: border-box;
-  position: sticky;
+  position: fixed;
   bottom: 0;
+  left: 0;
+  right: 0;
   z-index: 50;
   border-top: 1px solid #e5e7eb;
   background: #f3f4f6;
@@ -1380,6 +1382,8 @@ p.hero-subtitle {
   -webkit-backdrop-filter: saturate(180%) blur(6px);
   will-change: filter;
 }
+/* Reserve space so the fixed footer never sits on top of the last line of content. */
+body { padding-bottom: 64px; }
 .moat-footer__row {
   display: flex;
   flex-wrap: wrap;
@@ -1493,9 +1497,6 @@ p.hero-subtitle {
 section[id] {
   scroll-margin-top: 90px;
 }
-
-/* Need room above the footer so content's last line isn't covered when the page is short */
-body { padding-bottom: 0; }
 
 /* ---------- Vision block (homepage) ----------
    Centered 850px column, plain background (logo watermark lives on the hero). */
