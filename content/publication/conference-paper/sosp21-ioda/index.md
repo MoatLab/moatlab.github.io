@@ -22,7 +22,7 @@ publication_types: ["paper-conference"]
 
 # Publication name and optional abbreviated publication name.
 publication: "*Proceedings of the 28th ACM Symposium on Operating Systems Principles (SOSP '21)*"
-publication_short: "*SOSP '21*"
+publication_short: "In *SOSP '21*"
 
 abstract: "Modern flash storage provides high performance but suffers from unpredictable latency due to internal parallelism and resource contention. This paper presents IODA, a host/device co-design that provides strong predictability contracts for flash storage arrays."
 

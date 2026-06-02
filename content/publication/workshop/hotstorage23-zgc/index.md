@@ -5,7 +5,7 @@ authors: ["Dongjoo Seo", "Ping-Xiang Chen", "Huaicheng Li", "Matias Bjørling", 
 date: 2023-07-01
 publication_types: ["1"]
 publication: "In 15th ACM Workshop on Hot Topics in Storage and File Systems (HotStorage)"
-publication_short: "HotStorage '23"
+publication_short: "In *HotStorage '23*"
 abstract: ""
 featured: false
 image:

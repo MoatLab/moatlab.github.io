@@ -29,7 +29,7 @@ publication_types: ['paper-conference']
 
 # Publication name and optional abbreviated publication name.
 publication: In *Proceedings of the 28th ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS)*
-publication_short: ASPLOS '23
+publication_short: "In *ASPLOS '23*"
 awards:
   - "Distinguished Paper Award"
   - "IEEE Micro Top Picks (Honorable Mention)"

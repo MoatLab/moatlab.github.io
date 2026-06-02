@@ -5,7 +5,7 @@ authors: ["Mingzhe Hao", "Huaicheng Li", "Michael Hao Tong", "Chrisma Pakha", "R
 date: 2017-10-01
 publication_types: ["1"]
 publication: "In 26th ACM Symposium on Operating Systems Principles (SOSP)"
-publication_short: "SOSP '17"
+publication_short: "In *SOSP '17*"
 abstract: ""
 featured: false
 image:

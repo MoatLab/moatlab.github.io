@@ -5,7 +5,7 @@ authors: ["Haryadi S. Gunawi", "Riza O. Suminto", "Russell Sears", "Casey Gollih
 date: 2018-02-01
 publication_types: ["1"]
 publication: "In 16th USENIX Conference on File and Storage Technologies (FAST)"
-publication_short: "FAST '18"
+publication_short: "In *FAST '18*"
 award: "Best Paper Nominee"
 abstract: ""
 featured: false

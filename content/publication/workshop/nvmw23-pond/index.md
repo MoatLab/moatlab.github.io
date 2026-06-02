@@ -5,7 +5,7 @@ authors: ["Huaicheng Li", "Daniel S. Berger", "Lisa Hsu", "Daniel Ernst", "Pante
 date: 2023-03-01
 publication_types: ["1"]
 publication: "In the 14th Annual Non-Volatile Memories Workshop (NVMW)"
-publication_short: "NVMW '23"
+publication_short: "In *NVMW '23*"
 abstract: ""
 featured: false
 image:

@@ -288,7 +288,7 @@ section.alumni-section h2 {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .content a:hover, .main-container a:hover {
@@ -368,7 +368,7 @@ section.alumni-section h2 {
   border-radius: 12px;
   border: 1px solid #e5e7eb;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  transition: all 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
   overflow: hidden;
 }
 
@@ -391,7 +391,7 @@ section.alumni-section h2 {
   margin-bottom: 24px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
   border: 1px solid #f0f0f0;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
   overflow: hidden;
 }
 
@@ -606,7 +606,7 @@ section.alumni-section h2 {
   margin-right: 0;
   padding: 4px 8px;
   border-radius: 4px;
-  transition: all var(--transition-fast);
+  transition: color var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
   background-color: rgba(44, 90, 160, 0.08);
   border: 1px solid rgba(44, 90, 160, 0.15);
   font-weight: 500;
@@ -900,7 +900,7 @@ article.publication-page {
   position: relative;
   border-radius: 50%;
   overflow: hidden;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .person-card.faculty .person-image {
@@ -916,7 +916,7 @@ article.publication-page {
   object-position: center top;
   border: 1px solid #e5e7eb;
   border-radius: 50%;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
   filter: grayscale(0%);
 }
 
@@ -996,7 +996,7 @@ article.publication-page {
   color: #6b7280;
   text-decoration: none;
   font-size: 0.8rem;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
   font-weight: 400;
 }
 
@@ -1024,7 +1024,7 @@ article.publication-page {
   border: 1px solid #e5e7eb;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  transition: all var(--transition-medium);
+  transition: color var(--transition-medium), background-color var(--transition-medium), border-color var(--transition-medium), transform var(--transition-medium), box-shadow var(--transition-medium);
   position: relative;
   overflow: hidden;
 }
@@ -1085,7 +1085,7 @@ article.publication-page {
   border-radius: 6px;
   padding: 16px;
   background-color: #ffffff;
-  transition: all var(--transition-fast);
+  transition: color var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
   animation: slideIn 0.5s ease-out;
   position: relative;
 }
@@ -1310,7 +1310,7 @@ article.publication-page {
 .news-scroll::-webkit-scrollbar-thumb {
   background: linear-gradient(180deg, #861F41 0%, #E5751F 100%);
   border-radius: 10px;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
 }
 
 .news-scroll::-webkit-scrollbar-thumb:hover {
@@ -1332,7 +1332,7 @@ article.publication-page {
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(10px);
   border-radius: 8px;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
   cursor: default;
 }
 
@@ -1506,7 +1506,7 @@ p.hero-subtitle {
   border-radius: 16px;
   padding: 24px;
   border: 1px solid #e2e8f0;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
   display: flex;
   align-items: flex-start;
@@ -1568,7 +1568,7 @@ p.hero-subtitle {
   border-left: 4px solid var(--vt-maroon);
   font-size: 0.95rem;
   line-height: 1.4;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -1889,3 +1889,40 @@ section.vision-section {
   padding-top: 2px;
 }
 
+/* ============================================================
+   Accessibility baseline — added 2026-06 from site-review-merged-2026-06.md
+   ============================================================ */
+
+/* Visible keyboard focus for every interactive element */
+:focus-visible {
+  outline: 2px solid var(--vt-orange);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Respect users who request reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Contrast fixes: bring small text to WCAG AA (≥4.5:1 on white) */
+.person-period { color: #6b7280 !important; }              /* was #9ca3af (2.54:1) → 4.83:1 */
+.moat-footer { color: #5e6164; }                            /* was #75787B (4.04:1) → 5.36:1 */
+.news-feed__date, .news-line__date { color: #5e6164; }      /* was #75787B (4.44:1) → 5.36:1 */
+
+/* Publication chip: bump background opacity + text darkness to clear AA */
+.publication-entry .publication-links a {
+  color: #1a3d8f;                                           /* was #2c5aa0 */
+  background-color: #eef3fb;                                /* was rgba(44,90,160,0.08) */
+  border-color: #c3d4ee;                                    /* was rgba(44,90,160,0.15) */
+}
+.publication-entry .publication-links a:hover {
+  background-color: #d8e3f5;                                /* was rgba(44,90,160,0.15) */
+  border-color: #1a3d8f;
+  color: #102966;
+}
