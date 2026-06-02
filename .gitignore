@@ -1,18 +1,11 @@
-# Hugo default output directory
+# Hugo
 /public/
-
-# Hugo generated files
 .hugo_build.lock
 hugo_stats.json
 resources/
-
-# Hugo cache
 .cache/
 
-# Hugo resources
-resources/
-
-# OS generated files
+# OS metadata
 .DS_Store
 .DS_Store?
 ._*
@@ -21,24 +14,40 @@ resources/
 ehthumbs.db
 Thumbs.db
 
-# Editor files
+# Editor
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
 
-# Logs
+# Logs and temp
 *.log
-
-# Temporary files
 *.tmp
 *.temp
+*.bak
+*.bak.*
+*.orig
 
-# Local working dirs (not part of the deployed site)
-.playwright-mcp/
+# Local workspace (not part of the deployed site)
 relwk/
-.claude/
+notes/
+scratch/
+private/
+
+# Local-only top-level notes
+/*.local.md
+/*.private.md
+/*-session.md
+/.*-session.md
+/NOTES.md
+/notes.md
+
+# Local-only top-level config dirs
+/.tool-*
+/.local-*
+/.dev-*
+
+# Local working images
 static/students/*.tmp.jpg
 static/students/*.oriented.jpg
-CLAUDE.md
