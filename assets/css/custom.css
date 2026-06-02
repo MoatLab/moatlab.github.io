@@ -1769,6 +1769,7 @@ section[id] {
   z-index: 50;
   backdrop-filter: saturate(180%) blur(6px);
   -webkit-backdrop-filter: saturate(180%) blur(6px);
+  will-change: filter;
   background-color: rgba(243, 244, 246, 0.92);
 }
 /* Need room above the footer so content's last line isn't covered when the page is short */
