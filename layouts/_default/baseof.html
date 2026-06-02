@@ -22,24 +22,26 @@
            and de-stick the sticky navbar + footer). overflow-x:clip is safer when supported;
            html-level clip on older browsers still permits sticky to work. */
         html { overflow-x: clip; }
-        
+
         .page-header {
-            background-color: white;
-            border-bottom: 1px solid #e5e7eb;
+            background-color: rgba(243, 244, 246, 0.92);
+            backdrop-filter: saturate(180%) blur(6px);
+            -webkit-backdrop-filter: saturate(180%) blur(6px);
+            border-bottom: none;
             position: sticky;
             top: 0;
             z-index: 50;
         }
-        
+
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 2rem;
+            padding: 0.35rem 2rem;
             max-width: 75%;
             margin: 0 auto;
         }
-        
+
         .navbar-brand {
             font-size: 1.5rem;
             font-weight: bold;
@@ -48,7 +50,7 @@
             display: flex;
             align-items: center;
         }
-        
+
         .navbar-nav {
             display: flex;
             list-style: none;
@@ -56,18 +58,18 @@
             padding: 0;
             gap: 2rem;
         }
-        
+
         .nav-link {
             color: #6b7280;
             text-decoration: none;
             font-weight: 500;
             transition: color 0.2s;
         }
-        
+
         .nav-link:hover, .nav-link.active {
             color: #2c3e50;
         }
-        
+
         .main-container {
             max-width: 90%;
             margin: 0 auto;
@@ -82,7 +84,7 @@
                 padding: 1rem;
             }
         }
-        
+
         /* Special width for project pages */
         body.project-list .main-container {
             max-width: 100%;
@@ -90,84 +92,84 @@
             box-shadow: none;
             background-color: #f8f9fa;
         }
-        
+
         /* Increase width for publications section specifically */
         .publications-container {
             max-width: 90%;
             margin: 0 auto;
         }
-        
+
         /* Increase text content width for publications */
         .publications-container .publication-content {
             max-width: 95%;
         }
-        
+
         .content {
             font-size: 1.1rem;
             color: #333;
             max-width: 800px;
             margin: 0 auto;
         }
-        
+
         /* Increase text width for publications section */
         .publications-container .content {
             max-width: 1400px;
         }
-        
+
         /* Increase width for publication titles specifically */
         .publication-entry .publication-content {
             max-width: none;
             width: 100%;
         }
-        
+
         .publication-entry .publication-title {
             max-width: none;
             width: 100%;
             word-break: keep-all;
             hyphens: none;
         }
-        
+
         /* Override any container constraints */
         .publications-container {
             max-width: none;
             width: 100%;
         }
-        
+
         .main-container {
             max-width: none;
             width: 100%;
         }
-        
+
         /* Make the publication layout use more space for content */
         .publication-entry .publication-layout {
             gap: 2px;
         }
-        
+
         .publication-entry .publication-number-column {
             width: 25px;
             min-width: 25px;
         }
-        
+
         .publication-entry .publication-content {
             flex: 1;
             min-width: 0;
         }
-        
+
         /* Ensure maximum space for titles */
         .publication-entry .publication-title {
             font-size: 1.02rem;
             line-height: 1.15;
         }
-        
+
         .content ul {
             margin-top: 1rem;
             margin-bottom: 1rem;
         }
-        
+
         .content li {
             margin-bottom: 0.5rem;
         }
-        
+
         .content strong {
             color: #2c3e50;
         }
@@ -299,7 +301,7 @@
             row-gap: 20px;
             max-width: 100%;
         }
-        
+
         /* Add spacing between student rows */
         .people-grid.vertical .person-card.student {
             margin-bottom: 0;
@@ -325,6 +327,9 @@
             background: transparent;
             border: none;
             padding: 24px;
+        }
+        .person-card.faculty .person-image {
+            margin-bottom: 4px !important;
         }
 
         .person-card.student {
@@ -366,6 +371,9 @@
             gap: 0 !important;
             margin: 8px 0 0 0 !important;
             padding: 0 !important;
+        }
+        .person-card.faculty .person-info {
+            margin-top: 0 !important;
         }
 
         .person-name, .person-card h4 {
@@ -442,13 +450,13 @@
                 gap: 1rem;
                 padding: 1rem;
             }
-            
+
             .navbar-nav {
                 gap: 1rem;
                 flex-wrap: wrap;
                 justify-content: center;
             }
-            
+
             .nav-link {
                 font-size: 0.9rem;
             }
@@ -458,15 +466,15 @@
             .navbar {
                 padding: 0.75rem;
             }
-            
+
             .navbar-brand {
                 font-size: 1.3rem;
             }
-            
+
             .navbar-nav {
                 gap: 0.75rem;
             }
-            
+
             .nav-link {
                 font-size: 0.85rem;
                 padding: 0.25rem;
@@ -479,15 +487,15 @@
                 grid-template-columns: repeat(3, 1fr);
                 gap: 8px;
             }
-            
+
             .person-card.faculty {
                 padding: 20px;
             }
-            
+
             .people-section {
                 padding: 0 5px;
             }
-            
+
             .people-grid {
                 gap: 12px;
             }
@@ -534,7 +542,7 @@
             </ul>
         </nav>
     </div>
-    
+
     {{ if eq .Section "project" }}
     <!-- Full width for project pages -->
     {{ block "main" . }}{{ end }}
