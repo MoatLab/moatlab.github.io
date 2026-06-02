@@ -15,7 +15,7 @@ description: "Computer Systems Research at Virginia Tech"
 <section class="vision-section">
 
 <p class="vision-lede">
-We build fast computer systems that bridge <strong>operating systems and computer architecture</strong>. Our work spans memory and storage systems, closing the gap between fast-moving hardware and the software that has to run on it.
+We build computer systems that bridge operating systems and computer architecture. Our work spans memory and storage systems, closing the gap between fast-moving hardware and the software that has to run on it.
 </p>
 
 <p class="vision-thrust-intro">We currently work in four directions to advance systems support for emerging hardware and data-intensive workloads:</p>
