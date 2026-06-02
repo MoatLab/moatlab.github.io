@@ -70,6 +70,24 @@
             color: #1a1a1a;
         }
 
+        /* Skip-to-main link: visible only when focused (keyboard a11y) */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #1a1a1a;
+            color: #fff;
+            padding: 8px 12px;
+            text-decoration: none;
+            font-weight: 600;
+            z-index: 100;
+            border-radius: 0 0 4px 0;
+        }
+        .skip-link:focus { top: 0; }
+
+        /* Hamburger toggle: hidden on desktop, used on mobile via :checked */
+        .nav-toggle, .nav-toggle-label { display: none; }
+
         .main-container {
             max-width: 90%;
             margin: 0 auto;
@@ -443,42 +461,57 @@
             text-decoration: underline;
         }
 
-        /* Navigation Mobile Responsiveness */
+        /* Navigation Mobile Responsiveness: pure-CSS hamburger */
         @media (max-width: 768px) {
             .navbar {
-                flex-direction: column;
-                gap: 1rem;
-                padding: 1rem;
-            }
-
-            .navbar-nav {
-                gap: 1rem;
                 flex-wrap: wrap;
+                padding: 0.5rem 1rem;
+                max-width: 100%;
+            }
+            .navbar-brand { font-size: 1.3rem; }
+            .nav-toggle-label {
+                display: flex;
+                align-items: center;
                 justify-content: center;
+                width: 44px;
+                height: 44px;
+                cursor: pointer;
+                margin-left: auto;
             }
-
-            .nav-link {
-                font-size: 0.9rem;
+            .nav-toggle-label span,
+            .nav-toggle-label span::before,
+            .nav-toggle-label span::after {
+                display: block;
+                background: #1a1a1a;
+                height: 2px;
+                width: 22px;
+                position: relative;
+                border-radius: 2px;
+                transition: transform 0.2s ease;
             }
-        }
-
-        @media (max-width: 480px) {
-            .navbar {
-                padding: 0.75rem;
-            }
-
-            .navbar-brand {
-                font-size: 1.3rem;
-            }
-
+            .nav-toggle-label span::before { content: ''; position: absolute; top: -7px; left: 0; }
+            .nav-toggle-label span::after  { content: ''; position: absolute; top:  7px; left: 0; }
+            .nav-toggle:checked ~ .nav-toggle-label span { background: transparent; }
+            .nav-toggle:checked ~ .nav-toggle-label span::before { transform: translateY(7px) rotate(45deg); }
+            .nav-toggle:checked ~ .nav-toggle-label span::after  { transform: translateY(-7px) rotate(-45deg); }
             .navbar-nav {
-                gap: 0.75rem;
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                width: 100%;
+                margin-top: 0.5rem;
+                border-top: 1px solid #e5e7eb;
             }
-
+            .nav-toggle:checked ~ .navbar-nav { display: flex; }
+            .navbar-nav li { width: 100%; }
             .nav-link {
-                font-size: 0.85rem;
-                padding: 0.25rem;
+                display: block;
+                font-size: 1rem;
+                padding: 14px 4px;
+                min-height: 44px;
+                border-bottom: 1px solid #f3f4f6;
             }
+            .navbar-nav li:last-child .nav-link { border-bottom: none; }
         }
 
         /* Responsive adjustments */
@@ -525,12 +558,15 @@
     <link rel="alternate" type="application/rss+xml" title="MoatLab" href="/index.xml">
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
     <div class="page-header">
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Site">
             <a href="/" class="navbar-brand">
                 <img src="/moatlab-pics/moatlab-logo-120.png" alt="" width="30" height="30" style="margin-right: 8px;" fetchpriority="high">
                 MoatLab
             </a>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">
+            <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true"><span></span></label>
             <ul class="navbar-nav">
                 <li><a href="/" class="nav-link {{ if eq .RelPermalink "/" }}active{{ end }}">Home</a></li>
                 <li><a href="/#faculty" class="nav-link">People</a></li>
@@ -545,13 +581,13 @@
 
     {{ if eq .Section "project" }}
     <!-- Full width for project pages -->
-    {{ block "main" . }}{{ end }}
+    <main id="main">{{ block "main" . }}{{ end }}</main>
     {{ else }}
-    <div class="main-container">
+    <main id="main" class="main-container">
         <div class="content">
             {{ block "main" . }}{{ end }}
         </div>
-    </div>
+    </main>
     {{ end }}
     {{ partial "footer.html" . }}
 </body>
